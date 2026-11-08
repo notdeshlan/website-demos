@@ -1,0 +1,137 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow">
+<title>Hairvolution · Concept</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"><style>:root{--accent:#b4536a;--accent2:#f4d9df;--ink:#2a1d22;--bg:#fffaf8;
+--card:#ffffff;--line:rgba(0,0,0,.08);
+--line-strong:rgba(0,0,0,.16);--on-accent:#ffffff;
+--tag-ink:#2a1d22;
+--art:linear-gradient(135deg,#b4536a 0%,color-mix(in srgb,#b4536a 55%,#000) 100%);
+--map:repeating-linear-gradient(45deg,color-mix(in srgb,#b4536a 14%,transparent) 0 2px,transparent 2px 22px),color-mix(in srgb,#b4536a 10%,var(--bg));}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',system-ui,-apple-system,'Segoe UI',sans-serif;background:var(--bg);color:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+.concept{background:#111;color:#fff;font-size:13px;text-align:center;padding:8px 16px}
+.concept b{color:#ffd166}
+header.nav{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+header.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px;gap:16px}
+.logo{font-family:'Fraunces',Georgia,serif;font-size:22px;font-weight:700;text-decoration:none;letter-spacing:-.01em}
+.links{display:flex;gap:24px;font-size:15px}
+.links a{text-decoration:none;opacity:.8}.links a:hover{opacity:1}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border:0;border-radius:999px;padding:12px 22px;font:600 15px/1 inherit;font-family:inherit;cursor:pointer;text-decoration:none;transition:transform .15s,box-shadow .15s}
+.btn:hover{transform:translateY(-1px)}
+.btn-primary{background:var(--accent);color:var(--on-accent);box-shadow:0 8px 20px -8px var(--accent)}
+.btn-ghost{background:transparent;border:1.5px solid var(--line-strong);color:var(--ink)}
+.hero{padding:72px 0 56px}
+.hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center}
+.eyebrow{font-size:13px;letter-spacing:.14em;text-transform:uppercase;font-weight:600;color:var(--accent)}
+h1{font-family:'Fraunces',Georgia,serif;font-size:clamp(34px,5vw,56px);line-height:1.05;letter-spacing:-.02em;margin:14px 0 18px}
+.lead{font-size:18px;opacity:.8;max-width:34em}
+.cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+.rating{display:flex;align-items:center;gap:10px;margin-top:24px;font-size:14px;opacity:.85}
+.stars{color:#f5a524;letter-spacing:2px;font-size:16px}
+.art{aspect-ratio:4/5;border-radius:28px;background:var(--art);position:relative;overflow:hidden;box-shadow:0 30px 60px -30px rgba(0,0,0,.35)}
+.art::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 78% 18%,rgba(255,255,255,.28),transparent 38%),radial-gradient(circle at 12% 88%,rgba(0,0,0,.25),transparent 45%),repeating-linear-gradient(135deg,rgba(255,255,255,.05) 0 1px,transparent 1px 14px)}
+.art .mono{position:absolute;inset:0;display:grid;place-items:center;font-family:'Fraunces',Georgia,serif;font-weight:700;font-size:clamp(120px,16vw,220px);color:rgba(255,255,255,.9);letter-spacing:-.04em;text-shadow:0 20px 40px rgba(0,0,0,.25)}
+.art .ring{position:absolute;width:62%;aspect-ratio:1;border:2px solid rgba(255,255,255,.35);border-radius:50%;left:50%;top:46%;transform:translate(-50%,-50%)}
+.art .chip{position:absolute;left:20px;bottom:20px;background:var(--card);color:var(--ink);border-radius:16px;padding:14px 18px;font-size:14px;box-shadow:0 10px 30px -10px rgba(0,0,0,.3)}
+.art .chip b{display:block;font-size:18px}
+section{padding:64px 0}
+h2{font-family:'Fraunces',Georgia,serif;font-size:clamp(28px,3.5vw,38px);letter-spacing:-.01em;line-height:1.15;margin-bottom:10px}
+.sub{opacity:.75;margin-bottom:32px;max-width:40em}
+.tags{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+.tag{background:var(--accent2);color:var(--tag-ink);border-radius:999px;padding:7px 14px;font-size:14px;font-weight:500}
+.grid{display:grid;gap:20px}
+.cols-3{grid-template-columns:repeat(3,1fr)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:24px}
+.card h3{font-size:18px;margin-bottom:12px}
+.svc{display:flex;justify-content:space-between;gap:12px;padding:10px 0;border-top:1px dashed var(--line);font-size:15px}
+.svc:first-of-type{border-top:0}
+.svc small{display:block;opacity:.6;font-size:13px}
+.price{font-weight:600;white-space:nowrap}
+.note{font-size:13px;opacity:.6;margin-top:16px}
+.book{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+.book>div{min-width:0}
+.field{display:flex;flex-direction:column;gap:6px;margin-bottom:16px;font-size:14px;font-weight:600}
+select,input{font:inherit;font-weight:400;padding:12px 14px;border-radius:12px;border:1.5px solid var(--line-strong);background:var(--bg);color:var(--ink)}
+.days{display:flex;gap:8px;overflow-x:auto;padding-bottom:4px}
+.day{flex:0 0 auto;border:1.5px solid var(--line-strong);border-radius:14px;padding:8px 12px;text-align:center;cursor:pointer;background:var(--bg);color:var(--ink);font:inherit;font-size:13px;min-width:64px}
+.day b{display:block;font-size:18px}
+.day[aria-pressed=true],.slot[aria-pressed=true]{background:var(--accent);border-color:var(--accent);color:var(--on-accent)}
+.slots{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:4px}
+.slot{border:1.5px solid var(--line-strong);background:var(--bg);color:var(--ink);border-radius:10px;padding:9px 4px;font:inherit;font-size:14px;cursor:pointer}
+.slot:disabled{opacity:.3;text-decoration:line-through;cursor:not-allowed}
+.summary{background:var(--accent2);color:var(--tag-ink);border-radius:16px;padding:18px;margin-top:18px;font-size:15px}
+.done{display:none;text-align:center;padding:30px 10px}
+.done .tick{width:56px;height:56px;border-radius:50%;background:var(--accent);color:var(--on-accent);display:grid;place-items:center;margin:0 auto 14px;font-size:28px}
+.gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.gallery div{aspect-ratio:1;border-radius:16px;background:var(--art);display:grid;place-items:end start;padding:12px;font-size:12px;color:#fff;font-weight:600;text-shadow:0 1px 4px rgba(0,0,0,.4)}
+.info{display:grid;grid-template-columns:1fr 1fr 1fr;gap:20px}
+.hours div{display:flex;justify-content:space-between;padding:6px 0;border-top:1px dashed var(--line);font-size:15px}
+.hours div:first-child{border-top:0}
+.map{border-radius:20px;min-height:220px;background:var(--map);display:grid;place-items:center;text-align:center;padding:20px;text-decoration:none}
+.map span{background:var(--card);color:var(--ink);border-radius:999px;padding:10px 18px;font-weight:600;font-size:14px;box-shadow:0 8px 20px -10px rgba(0,0,0,.35)}
+footer{padding:36px 0 90px;font-size:14px;opacity:.7;border-top:1px solid var(--line)}
+footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.float{position:fixed;right:18px;bottom:18px;z-index:30;background:#25d366;color:#fff;border-radius:999px;padding:14px 18px;font-weight:700;text-decoration:none;box-shadow:0 12px 30px -10px rgba(0,0,0,.5);font-size:15px}
+.aids{display:flex;flex-wrap:wrap;gap:8px}
+.aids span{border:1px solid var(--line-strong);border-radius:10px;padding:8px 12px;font-size:14px;background:var(--card)}
+.ico{width:44px;height:44px;border-radius:12px;background:var(--accent2);color:var(--accent);display:grid;place-items:center;margin-bottom:14px;font-size:20px}
+.card p{font-size:15px;opacity:.78}
+.privacy{font-size:12.5px;opacity:.7;margin-top:10px;line-height:1.5}
+@media (max-width:860px){
+ .hero{padding:40px 0}
+ .hero .wrap,.book,.info{grid-template-columns:1fr}
+ .art{aspect-ratio:16/11}
+ .cols-3{grid-template-columns:1fr}
+ .gallery{grid-template-columns:repeat(2,1fr)}
+ .links{display:none}
+ header.nav .btn{padding:10px 16px;font-size:14px;white-space:nowrap}
+ .logo{font-size:18px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;min-width:0}
+ .concept{font-size:12px}
+ section{padding:48px 0}
+ .slots{grid-template-columns:repeat(3,1fr)}
+}
+</style></head><body>
+<div class="concept"><b>Concept design</b> prepared by Deshlan Pillay for Hairvolution. This is not the official website; prices, hours and services are samples to be confirmed.</div>
+<header class="nav"><div class="wrap"><a class="logo" href="#">Hairvolution</a><nav class="links"><a href="#services">Services</a><a href="#book">Book</a><a href="#visit">Visit</a></nav><a class="btn btn-primary" href="#book">Book now</a></div></header>
+<section class="hero"><div class="wrap"><div><div class="eyebrow">Hair salon in Brooklyn, Pretoria</div><h1>Colour, cuts &amp; extensions by a team clients keep coming back to</h1><p class="lead">See our services and prices, then pick a time that suits you. No need to call or send a DM to book.</p>
+<div class="cta"><a class="btn btn-primary" href="#book">Book an appointment</a><a class="btn btn-ghost" href="tel:+27123465064">Call 012 346 5064</a><a class="btn btn-ghost" href="https://www.instagram.com/hairvolutionbrooklyn/" target="_blank" rel="noopener">Instagram</a></div>
+<div class="rating"><span class="stars">★★★★★</span><span><b>4.8</b> from 297 Google reviews</span></div><div class="tags"><span class="tag">Blonde &amp; balayage specialists</span><span class="tag">Extensions</span><span class="tag">Head massage with every wash</span><span class="tag">Women-owned · LGBTQ+ friendly</span></div></div>
+<div class="art" aria-hidden="true"><div class="ring"></div><div class="mono">H</div><div class="chip">Next available<b id="nextslot">Tomorrow, 09:30</b></div></div></div></section>
+<section id="services"><div class="wrap"><h2>Services &amp; prices</h2><p class="sub">Sample menu for this concept. The real prices and times would come from you.</p><div class="grid cols-3"><div class="card"><h3>Cuts &amp; styling</h3><div class="svc"><span>Wash, cut &amp; blow-dry<small>60 min</small></span><span class="price">from R350</span></div><div class="svc"><span>Blow-dry<small>45 min</small></span><span class="price">from R220</span></div><div class="svc"><span>Kids&#x27; cut<small>30 min</small></span><span class="price">from R180</span></div></div><div class="card"><h3>Colour</h3><div class="svc"><span>Full colour<small>90 min</small></span><span class="price">from R650</span></div><div class="svc"><span>Balayage<small>180 min</small></span><span class="price">from R1,200</span></div><div class="svc"><span>Highlights (half head)<small>120 min</small></span><span class="price">from R850</span></div></div><div class="card"><h3>Treatments &amp; extensions</h3><div class="svc"><span>Treatment &amp; head massage<small>30 min</small></span><span class="price">from R250</span></div><div class="svc"><span>Extensions consultation<small>20 min</small></span><span class="price">Free</span></div></div></div><p class="note">Final price depends on hair length and products used. Your stylist confirms it before starting.</p></div></section>
+<section id="book" style="background:color-mix(in srgb,var(--accent) 6%,var(--bg))"><div class="wrap"><h2>Book online</h2><p class="sub">Choose a service, a stylist and a time. You get a confirmation straight away.</p>
+<div class="card"><form id="bookform" class="book"><div>
+<label class="field">Service<select id="svc"><optgroup label="Cuts &amp; styling"><option>Wash, cut &amp; blow-dry (from R350)</option><option>Blow-dry (from R220)</option><option>Kids&#x27; cut (from R180)</option></optgroup><optgroup label="Colour"><option>Full colour (from R650)</option><option>Balayage (from R1,200)</option><option>Highlights (half head) (from R850)</option></optgroup><optgroup label="Treatments &amp; extensions"><option>Treatment &amp; head massage (from R250)</option><option>Extensions consultation (Free)</option></optgroup></select></label>
+<label class="field">Stylist<select id="staff"><option>Bianca</option><option>Any available stylist</option></select></label>
+<label class="field">Your name<input required placeholder="e.g. Thandi M." autocomplete="off"></label>
+<label class="field">Cell number<input required type="tel" placeholder="e.g. 082 123 4567" autocomplete="off"></label>
+</div><div><div class="field">Day</div><div class="days" id="days"></div><div class="field" style="margin-top:18px">Time</div><div class="slots" id="slots"></div>
+<div class="summary" id="sum"></div><button class="btn btn-primary" style="width:100%;margin-top:16px" type="submit">Confirm booking</button>
+<p class="privacy">Demo only: nothing you type here is sent anywhere.</p></div></form>
+<div class="done" id="done"><div class="tick">✓</div><h3>You're booked!</h3><p id="donewhen" style="margin-top:6px"></p><p class="note">In the live version, clients get an SMS/WhatsApp confirmation and you see the booking on your staff dashboard.</p></div></div></div></section>
+<section><div class="wrap"><h2>Our work</h2><p class="sub">Your best before-and-after photos, pulled from Instagram with your permission.</p><div class="gallery"><div style="filter:hue-rotate(0deg) saturate(0.8)">Your work</div><div style="filter:hue-rotate(12deg) saturate(0.9)">Colour</div><div style="filter:hue-rotate(24deg) saturate(1.0)">Styling</div><div style="filter:hue-rotate(36deg) saturate(1.1)">The salon</div></div></div></section>
+<section id="visit"><div class="wrap"><h2>Visit us</h2><div class="info" style="margin-top:24px">
+<div class="card"><h3>Opening hours</h3><div class="hours"><div><span>Tue – Fri</span><b>08:00 – 17:00</b></div><div><span>Saturday</span><b>08:00 – 14:00</b></div><div><span>Sun – Mon</span><b>Closed</b></div></div><p class="note">Sample hours, to be confirmed.</p></div>
+<div class="card"><h3>Contact</h3><p>343 Brooklyn Rd, Brooklyn, Pretoria, 0181</p><p style="margin-top:10px"><a href="tel:+27123465064"><b>012 346 5064</b></a></p><div class="cta" style="margin-top:16px"><a class="btn btn-primary" href="https://www.google.com/maps/search/?api=1&query=343+Brooklyn+Rd%2C+Brooklyn%2C+Pretoria%2C+0181" target="_blank" rel="noopener">Directions</a></div></div>
+<a class="map" href="https://www.google.com/maps/search/?api=1&query=343+Brooklyn+Rd%2C+Brooklyn%2C+Pretoria%2C+0181" target="_blank" rel="noopener"><span>📍 Open in Google Maps</span></a></div></div></section>
+<footer><div class="wrap"><span>© Hairvolution</span><span>Concept website by Deshlan Pillay</span></div></footer>
+<a class="float" href="https://wa.me/27123465064" target="_blank" rel="noopener">WhatsApp us</a>
+
+<script>
+(function(){
+ const svcSel=document.getElementById('svc'),staffSel=document.getElementById('staff'),daysEl=document.getElementById('days'),slotsEl=document.getElementById('slots'),sum=document.getElementById('sum'),form=document.getElementById('bookform'),done=document.getElementById('done');
+ const OPEN={0:null,1:null,2:[8,17],3:[8,17],4:[8,17],5:[8,17],6:[8,14]};let day=null,slot=null;
+ const fmt=d=>d.toLocaleDateString('en-ZA',{weekday:'short'});
+ const today=new Date();today.setHours(0,0,0,0);
+ for(let i=0;i<10;i++){const d=new Date(today);d.setDate(d.getDate()+i);const b=document.createElement('button');b.type='button';b.className='day';b.setAttribute('aria-pressed','false');b.innerHTML=fmt(d)+'<b>'+d.getDate()+'</b>';const closed=OPEN[d.getDay()]===null;if(closed){b.disabled=true;b.style.opacity=.35;b.title='Closed'}b.onclick=()=>{day=d;slot=null;[...daysEl.children].forEach(x=>x.setAttribute('aria-pressed','false'));b.setAttribute('aria-pressed','true');renderSlots();update()};daysEl.appendChild(b)}
+ function seeded(n){let x=Math.sin(n)*10000;return x-Math.floor(x)}
+ const hhmm=m=>String(Math.floor(m/60)).padStart(2,'0')+':'+String(m%60).padStart(2,'0');
+ function free(d){const h=OPEN[d.getDay()];if(!h)return [];const now=new Date(),out=[];for(let m=h[0]*60;m<h[1]*60;m+=30){const past=d.getTime()===today.getTime()&&m<=now.getHours()*60+now.getMinutes();out.push({t:hhmm(m),off:past||seeded(d.getDate()*97+m)<.35})}return out}
+ [...daysEl.children].forEach((b,i)=>{const d=new Date(today);d.setDate(d.getDate()+i);if(!free(d).some(s=>!s.off)){b.disabled=true;b.style.opacity=.35}});
+ (function(){const n=document.getElementById('nextslot');if(!n)return;for(let i=0;i<10;i++){const d=new Date(today);d.setDate(d.getDate()+i);const s=free(d).find(s=>!s.off);if(s){n.textContent=(i===0?'Today':i===1?'Tomorrow':d.toLocaleDateString('en-ZA',{weekday:'long'}))+', '+s.t;return}}})();
+ function renderSlots(){slotsEl.innerHTML='';if(!day){slotsEl.innerHTML='<p style="grid-column:1/-1;opacity:.6;font-size:14px">Pick a day to see open times.</p>';return}for(const s of free(day)){const b=document.createElement('button');b.type='button';b.className='slot';b.textContent=s.t;b.setAttribute('aria-pressed','false');if(s.off)b.disabled=true;b.onclick=()=>{slot=s.t;[...slotsEl.children].forEach(x=>x.setAttribute('aria-pressed','false'));b.setAttribute('aria-pressed','true');update()};slotsEl.appendChild(b)}}
+ function update(){const s=svcSel.options[svcSel.selectedIndex].text;sum.innerHTML=(day&&slot)?'<b>'+s+'</b><br>'+(staffSel?staffSel.value+' · ':'')+day.toLocaleDateString('en-ZA',{weekday:'long',day:'numeric',month:'long'})+' at '+slot:'Choose a service, day and time.'}
+ svcSel.onchange=update;if(staffSel)staffSel.onchange=update;renderSlots();update();
+ form.onsubmit=ev=>{ev.preventDefault();if(!(day&&slot)){sum.innerHTML='Please pick a day and a time first.';return}form.style.display='none';done.style.display='block';document.getElementById('donewhen').textContent=sum.innerText.replace(/\n/g,' · ')};
+})();
+</script></body></html>
