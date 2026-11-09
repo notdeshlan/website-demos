@@ -1,0 +1,153 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow">
+<title>Foxy Locks · Concept</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"><style>
+:root{--accent:#b4532a;--accent2:#f6e3d8;--ink:#24181d;--muted:#6f5f66;--bg:#fbf6f3;--card:#ffffff;--line:rgba(60,20,40,.10);--line-strong:rgba(60,20,40,.22);--on-accent:#fff;--wa:#25d366;
+--art:linear-gradient(135deg,var(--accent) 0%,color-mix(in srgb,var(--accent) 50%,#2a0f1d) 100%)}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',system-ui,-apple-system,'Segoe UI',sans-serif;background:var(--bg);color:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+.concept{background:#1a1014;color:#fff;font-size:13px;text-align:center;padding:8px 16px}
+.concept b{color:#ffd166}
+header.nav{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--bg) 90%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+header.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px;gap:16px}
+.logo{font-family:'Fraunces',Georgia,serif;font-size:22px;font-weight:700;text-decoration:none;letter-spacing:-.01em;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.links{display:flex;gap:24px;font-size:15px}
+.links a{text-decoration:none;opacity:.75}.links a:hover{opacity:1}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border:0;border-radius:999px;padding:12px 22px;font:600 15px/1 'Inter',sans-serif;cursor:pointer;text-decoration:none;transition:transform .15s;white-space:nowrap}
+.btn:hover{transform:translateY(-1px)}
+.btn svg{width:18px;height:18px}
+.btn-primary{background:var(--accent);color:var(--on-accent);box-shadow:0 8px 20px -8px var(--accent)}
+.btn-ghost{background:transparent;border:1.5px solid var(--line-strong);color:var(--ink)}
+.btn-wa{background:var(--wa);color:#fff}
+.hero{padding:72px 0 56px}
+.hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center}
+.eyebrow{font-size:13px;letter-spacing:.14em;text-transform:uppercase;font-weight:600;color:var(--accent)}
+h1{font-family:'Fraunces',Georgia,serif;font-size:clamp(34px,5vw,56px);line-height:1.05;letter-spacing:-.02em;margin:14px 0 18px;text-wrap:balance}
+.lead{font-size:18px;color:var(--muted);max-width:34em}
+.cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+.tags{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}
+.tag{background:var(--accent2);color:var(--ink);border-radius:999px;padding:7px 14px;font-size:14px;font-weight:500}
+.art{aspect-ratio:4/5;border-radius:28px;background:var(--art);position:relative;overflow:hidden;box-shadow:0 30px 60px -30px rgba(60,20,40,.45)}
+.art::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 78% 18%,rgba(255,255,255,.3),transparent 38%),radial-gradient(circle at 12% 88%,rgba(0,0,0,.25),transparent 45%),repeating-linear-gradient(135deg,rgba(255,255,255,.05) 0 1px,transparent 1px 14px)}
+.art .mono{position:absolute;inset:0;display:grid;place-items:center;font-family:'Fraunces',Georgia,serif;font-weight:700;font-size:clamp(110px,15vw,200px);color:rgba(255,255,255,.92);letter-spacing:-.04em;text-shadow:0 20px 40px rgba(0,0,0,.25)}
+.art .ring{position:absolute;width:62%;aspect-ratio:1;border:2px solid rgba(255,255,255,.35);border-radius:50%;left:50%;top:46%;transform:translate(-50%,-50%)}
+.art .chip{position:absolute;left:20px;bottom:20px;background:var(--card);color:var(--ink);border-radius:16px;padding:14px 18px;font-size:14px;box-shadow:0 10px 30px -10px rgba(0,0,0,.3)}
+.art .chip b{display:block;font-size:18px}
+section{padding:64px 0}
+h2{font-family:'Fraunces',Georgia,serif;font-size:clamp(28px,3.5vw,38px);letter-spacing:-.01em;line-height:1.15;margin-bottom:10px}
+.sub{color:var(--muted);margin-bottom:32px;max-width:40em}
+.grid{display:grid;gap:20px}
+.cols-3{grid-template-columns:repeat(3,1fr)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:24px}
+.card h3{font-size:18px;margin-bottom:12px}
+.svc{display:flex;justify-content:space-between;gap:12px;padding:10px 0;border-top:1px dashed var(--line);font-size:15px}
+.svc:first-of-type{border-top:0}
+.svc small{display:block;color:var(--muted);font-size:13px}
+.price{font-weight:600;white-space:nowrap}
+.note{font-size:13px;color:var(--muted);margin-top:16px}
+.book{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+.book>div{min-width:0}
+.field{display:flex;flex-direction:column;gap:6px;margin-bottom:16px;font-size:14px;font-weight:600}
+select,input{font:inherit;font-weight:400;padding:12px 14px;border-radius:12px;border:1.5px solid var(--line-strong);background:#fff;color:var(--ink);width:100%}
+.days{display:flex;gap:8px;overflow-x:auto;padding-bottom:4px}
+.day{flex:0 0 auto;border:1.5px solid var(--line-strong);border-radius:14px;padding:8px 12px;text-align:center;cursor:pointer;background:#fff;color:var(--ink);font:inherit;font-size:13px;min-width:64px}
+.day b{display:block;font-size:18px}
+.day[aria-pressed=true],.slot[aria-pressed=true]{background:var(--accent);border-color:var(--accent);color:var(--on-accent)}
+.slots{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:4px}
+.slot{border:1.5px solid var(--line-strong);background:#fff;color:var(--ink);border-radius:10px;padding:9px 4px;font:inherit;font-size:14px;cursor:pointer}
+.slot:disabled{opacity:.3;text-decoration:line-through;cursor:not-allowed}
+.summary{background:var(--accent2);border-radius:16px;padding:18px;margin-top:18px;font-size:15px}
+.privacy{font-size:12.5px;color:var(--muted);margin-top:10px}
+.done{display:none;text-align:center;padding:30px 10px}
+.done .tick{width:56px;height:56px;border-radius:50%;background:var(--accent);color:#fff;display:grid;place-items:center;margin:0 auto 14px;font-size:28px}
+.gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.gallery div{aspect-ratio:1;border-radius:16px;background:var(--art);display:grid;place-items:end start;padding:12px;font-size:12px;color:#fff;font-weight:600;text-shadow:0 1px 4px rgba(0,0,0,.4)}
+.info{display:grid;grid-template-columns:1fr 1fr 1fr;gap:20px}
+.hours div{display:flex;justify-content:space-between;padding:6px 0;border-top:1px dashed var(--line);font-size:15px}
+.hours div:first-child{border-top:0}
+.areas{display:flex;flex-wrap:wrap;gap:8px}
+.areas span{border:1px solid var(--line-strong);border-radius:999px;padding:6px 12px;font-size:14px;background:#fff}
+footer{padding:36px 0 90px;font-size:14px;color:var(--muted);border-top:1px solid var(--line)}
+footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.float{position:fixed;right:18px;bottom:18px;z-index:30;display:flex;align-items:center;gap:8px;background:var(--wa);color:#fff;border-radius:999px;padding:14px 18px;font-weight:700;text-decoration:none;box-shadow:0 12px 30px -10px rgba(0,0,0,.5);font-size:15px}
+.float svg{width:20px;height:20px}
+@media (max-width:860px){
+ .hero{padding:40px 0}
+ .hero .wrap,.book,.info{grid-template-columns:1fr}
+ .art{aspect-ratio:16/11}
+ .cols-3{grid-template-columns:1fr}
+ .gallery{grid-template-columns:repeat(2,1fr)}
+ .links{display:none}
+ header.nav .btn{padding:10px 16px;font-size:14px}
+ .logo{font-size:18px}
+ .concept{font-size:12px}
+ section{padding:48px 0}
+ .slots{grid-template-columns:repeat(3,1fr)}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn{transition:none}}
+</style></head><body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+ <symbol id="i-bolt" viewBox="0 0 24 24"><path fill="currentColor" d="M13 2 4 14h6l-1 8 9-12h-6l1-8z"/></symbol>
+ <symbol id="i-drop" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2.5S5 10.2 5 15a7 7 0 0 0 14 0c0-4.8-7-12.5-7-12.5z"/></symbol>
+ <symbol id="i-wrench" viewBox="0 0 24 24"><path fill="currentColor" d="M21.7 6.3a6 6 0 0 1-7.9 7.4l-6.9 6.9a2.1 2.1 0 0 1-3-3l6.9-6.9A6 6 0 0 1 18.2 2.8l-3.6 3.6.9 2.1 2.1.9 3.6-3.6c.2.2.4.3.5.5z"/></symbol>
+ <symbol id="i-home" viewBox="0 0 24 24"><path fill="currentColor" d="M12 3 2 11.5h3V21h5.5v-6h3v6H19v-9.5h3z"/></symbol>
+ <symbol id="i-brush" viewBox="0 0 24 24"><path fill="currentColor" d="M20.7 3.3a1 1 0 0 0-1.4 0L10 12.6l1.4 1.4 9.3-9.3a1 1 0 0 0 0-1.4zM8.6 14.1c-1.9 0-3.4 1.5-3.4 3.4 0 1.1-.8 2-2.2 2.5 1 1.3 2.7 2 4.4 2 2.6 0 4.6-2 4.6-4.6 0-.6-.1-1.2-.4-1.7z"/></symbol>
+ <symbol id="i-sun" viewBox="0 0 24 24"><path fill="currentColor" d="M12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10zM11 1h2v3h-2zm0 19h2v3h-2zM1 11h3v2H1zm19 0h3v2h-3zM4.2 5.6l1.4-1.4 2.1 2.1-1.4 1.4zm12.1 12.1 1.4-1.4 2.1 2.1-1.4 1.4zM4.2 18.4l2.1-2.1 1.4 1.4-2.1 2.1zM16.3 6.3l2.1-2.1 1.4 1.4-2.1 2.1z"/></symbol>
+ <symbol id="i-layers" viewBox="0 0 24 24"><path fill="currentColor" d="m12 2 10 5-10 5L2 7zm-7.6 8.8L12 14.6l7.6-3.8L22 12l-10 5-10-5zm0 5L12 19.6l7.6-3.8L22 17l-10 5-10-5z"/></symbol>
+ <symbol id="i-grid" viewBox="0 0 24 24"><path fill="currentColor" d="M3 3h8v8H3zm10 0h8v8h-8zM3 13h8v8H3zm10 0h8v8h-8z"/></symbol>
+ <symbol id="i-fence" viewBox="0 0 24 24"><path fill="currentColor" d="M4 3 2 6v15h4V6zm7 0L9 6v15h4V6zm7 0-2 3v15h4V6zM1 9h22v2H1zm0 6h22v2H1z"/></symbol>
+ <symbol id="i-phone" viewBox="0 0 24 24"><path fill="currentColor" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></symbol>
+ <symbol id="i-mail" viewBox="0 0 24 24"><path fill="currentColor" d="M3 5h18a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1zm9 7.2L4.4 7H4v.9l8 5.4 8-5.4V7h-.4z"/></symbol>
+ <symbol id="i-wa" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.15l-.3-.18-3 .78.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.25-.12-1.47-.72-1.7-.8s-.39-.12-.56.12-.64.8-.78.97-.29.18-.53.06a6.7 6.7 0 0 1-3.350-2.93c-.25-.44.25-.4.72-1.34a.45.45 0 0 0-.02-.43c-.06-.12-.56-1.34-.76-1.84s-.4-.42-.56-.42h-.48a.92.92 0 0 0-.66.31 2.78 2.78 0 0 0-.87 2.07 4.84 4.84 0 0 0 1 2.57 11.1 11.1 0 0 0 4.25 3.75c1.58.68 2.2.74 2.99.62a2.55 2.55 0 0 0 1.68-1.18 2.080 2.080 0 0 0 .14-1.18c-.06-.11-.22-.17-.47-.29z"/></symbol>
+ <symbol id="i-check" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" d="m5 12.5 4.5 4.5L19 7.5"/></symbol>
+ <symbol id="i-shield" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2 4 5v6c0 5 3.4 9.7 8 11 4.6-1.3 8-6 8-11V5l-8-3zm-1.2 14.2-3.5-3.5 1.4-1.4 2.1 2.1 4.8-4.8 1.4 1.4-6.2 6.2z"/></symbol>
+ <symbol id="i-clock" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm1 10.4 3.5 2.1-.8 1.3L11 13V6.5h2v5.9z"/></symbol>
+ <symbol id="i-pin" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></symbol>
+ <symbol id="i-star" viewBox="0 0 24 24"><path fill="currentColor" d="m12 2 3 6.9 7.5.7-5.7 5 1.7 7.4L12 18.3 5.5 22l1.7-7.4-5.7-5 7.5-.7z"/></symbol>
+ <symbol id="i-quote" viewBox="0 0 24 24"><path fill="currentColor" d="M6 3h9l5 5v13H6zm8 1.5V9h4.5zM9 12v2h8v-2zm0 4v2h8v-2z"/></symbol>
+</svg>
+<div class="concept"><b>Concept design</b> prepared by Deshlan Pillay for Foxy Locks. This is not the official website; prices, hours and services are samples to be confirmed.</div>
+<header class="nav"><div class="wrap"><a class="logo" href="#">Foxy Locks</a><nav class="links" aria-label="Main"><a href="#services">Services</a><a href="#book">Book</a><a href="#areas">Areas</a></nav><a class="btn btn-primary" href="#book">Book now</a></div></header>
+<main>
+<section class="hero"><div class="wrap"><div><div class="eyebrow">Mobile hairdresser · Centurion &amp; Pretoria</div><h1>Salon-quality hair, in the comfort of your home.</h1><p class="lead">Cuts, colour, highlights, Brazilians and formal styling. Pick a time, tell me your suburb, and I&#x27;ll come to you.</p>
+<div class="cta"><a class="btn btn-primary" href="#book">Book an appointment</a><a class="btn btn-ghost" href="tel:+27607363922"><svg><use href="#i-phone"/></svg>Call 060 736 3922</a></div>
+<div class="tags"><span class="tag">I come to you</span><span class="tag">Colour corrections</span><span class="tag">Brazilian treatments</span><span class="tag">Bridal &amp; formal</span></div></div>
+<div class="art" aria-hidden="true"><div class="ring"></div><div class="mono">FL</div><div class="chip">Next available<b id="nextslot">Tomorrow, 09:00</b></div></div></div></section>
+<section id="services"><div class="wrap"><h2>Services &amp; prices</h2><p class="sub">Sample menu for this concept. The real prices and times would come from you.</p><div class="grid cols-3"><div class="card"><h3>Cut &amp; style</h3><div class="svc"><span>Cut &amp; blow-dry<small>60 min</small></span><span class="price">from R250</span></div><div class="svc"><span>Formal / occasion styling<small>60 min</small></span><span class="price">from R350</span></div></div><div class="card"><h3>Colour</h3><div class="svc"><span>Root touch-up<small>90 min</small></span><span class="price">from R450</span></div><div class="svc"><span>Highlights<small>2 hrs</small></span><span class="price">from R650</span></div><div class="svc"><span>Colour correction<small>By consult</small></span><span class="price">quote</span></div></div><div class="card"><h3>Treatments</h3><div class="svc"><span>Brazilian treatment<small>2–3 hrs</small></span><span class="price">from R900</span></div></div></div><p class="note">Prices depend on hair length and thickness. A travel fee may apply outside your main areas.</p></div></section>
+<section id="book" style="background:color-mix(in srgb,var(--accent) 7%,var(--bg))"><div class="wrap"><h2>Book online</h2><p class="sub">Choose a service, your suburb and a time. I&#x27;ll confirm on WhatsApp.</p>
+<div class="card"><form id="bookform" class="book" novalidate><div>
+<label class="field">Service<select id="svc"><optgroup label="Cut &amp; style"><option>Cut &amp; blow-dry (from R250)</option><option>Formal / occasion styling (from R350)</option></optgroup><optgroup label="Colour"><option>Root touch-up (from R450)</option><option>Highlights (from R650)</option><option>Colour correction (quote)</option></optgroup><optgroup label="Treatments"><option>Brazilian treatment (from R900)</option></optgroup></select></label>
+<label class="field">Your suburb (I come to you)<select id="where"><option>Centurion</option><option>Eldoraigne</option><option>Rooihuiskraal</option><option>Wierdapark</option><option>Lyttelton</option><option>Irene</option><option>Pretoria East</option><option>Moreleta Park</option><option>Faerie Glen</option><option>Other (tell me on WhatsApp)</option></select></label>
+<label class="field">Your name<input id="nm" placeholder="e.g. Thandi M." autocomplete="off"></label>
+<label class="field">Cell number<input id="cl" type="tel" placeholder="e.g. 082 123 4567" autocomplete="off"></label>
+</div><div><div class="field">Day</div><div class="days" id="days"></div><div class="field" style="margin-top:18px">Time</div><div class="slots" id="slots"></div>
+<div class="summary" id="sum"></div><button class="btn btn-primary" style="width:100%;margin-top:16px" type="submit">Confirm booking</button>
+<p class="privacy">Demo only: nothing you type here is sent anywhere.</p></div></form>
+<div class="done" id="done" tabindex="-1"><div class="tick">✓</div><h3>You're booked!</h3><p id="donewhen" style="margin-top:6px"></p><p class="note">In the live version, clients get a WhatsApp confirmation and a reminder the day before, and the booking lands in your calendar.</p></div></div></div></section>
+<section><div class="wrap"><h2>My work</h2><p class="sub">Your best photos, pulled from Facebook or Instagram with your permission.</p><div class="gallery"><div style="filter:hue-rotate(0deg) saturate(0.8)">Colour</div><div style="filter:hue-rotate(12deg) saturate(0.9)">Highlights</div><div style="filter:hue-rotate(24deg) saturate(1)">Formal styling</div><div style="filter:hue-rotate(36deg) saturate(1.1)">Brazilian</div></div></div></section>
+<section id="areas"><div class="wrap"><h2>Hours &amp; areas</h2><div class="info" style="margin-top:24px">
+<div class="card"><h3>Hours</h3><div class="hours"><div><span>Tue – Fri</span><b>08:00 – 17:00</b></div><div><span>Saturday</span><b>08:00 – 14:00</b></div><div><span>Sun – Mon</span><b>Closed</b></div></div><p class="note">Sample hours, to be confirmed.</p></div>
+<div class="card"><h3>Where I travel</h3><div class="areas"><span>Centurion</span><span>Eldoraigne</span><span>Rooihuiskraal</span><span>Wierdapark</span><span>Lyttelton</span><span>Irene</span><span>Pretoria East</span><span>Moreleta Park</span><span>Faerie Glen</span></div><p class="note">Other areas on request.</p></div>
+<div class="card"><h3>Contact</h3><p>Call or WhatsApp <a href="tel:+27607363922"><b>060 736 3922</b></a></p><div class="cta" style="margin-top:16px"><a class="btn btn-wa" href="https://wa.me/27607363922" target="_blank" rel="noopener"><svg><use href="#i-wa"/></svg>WhatsApp</a></div></div>
+</div></div></section>
+</main>
+<footer><div class="wrap"><span>© Foxy Locks</span><span>Concept website by Deshlan Pillay</span></div></footer>
+<a class="float" href="https://wa.me/27607363922" target="_blank" rel="noopener"><svg><use href="#i-wa"/></svg>WhatsApp</a>
+<script>
+(function(){
+ const svcSel=document.getElementById('svc'),where=document.getElementById('where'),daysEl=document.getElementById('days'),slotsEl=document.getElementById('slots'),sum=document.getElementById('sum'),form=document.getElementById('bookform'),done=document.getElementById('done');
+ const OPEN={"0":null,"1":null,"2":[8,17],"3":[8,17],"4":[8,17],"5":[8,17],"6":[8,14]};let day=null,slot=null;
+ const today=new Date();today.setHours(0,0,0,0);
+ function seeded(n){let x=Math.sin(n)*10000;return x-Math.floor(x)}
+ const hhmm=m=>String(Math.floor(m/60)).padStart(2,'0')+':'+String(m%60).padStart(2,'0');
+ function free(d){const h=OPEN[d.getDay()];if(!h)return [];const now=new Date(),out=[];for(let m=h[0]*60;m<h[1]*60;m+=60){const past=d.getTime()===today.getTime()&&m<=now.getHours()*60+now.getMinutes();out.push({t:hhmm(m),off:past||seeded(d.getDate()*97+m)<.4})}return out}
+ for(let i=0;i<12;i++){const d=new Date(today);d.setDate(d.getDate()+i);const b=document.createElement('button');b.type='button';b.className='day';b.setAttribute('aria-pressed','false');b.innerHTML=d.toLocaleDateString('en-ZA',{weekday:'short'})+'<b>'+d.getDate()+'</b>';if(!free(d).some(s=>!s.off)){b.disabled=true;b.style.opacity=.35}b.onclick=()=>{day=d;slot=null;[...daysEl.children].forEach(x=>x.setAttribute('aria-pressed','false'));b.setAttribute('aria-pressed','true');renderSlots();update()};daysEl.appendChild(b)}
+ (function(){const n=document.getElementById('nextslot');for(let i=0;i<12;i++){const d=new Date(today);d.setDate(d.getDate()+i);const s=free(d).find(s=>!s.off);if(s){n.textContent=(i===0?'Today':i===1?'Tomorrow':d.toLocaleDateString('en-ZA',{weekday:'long'}))+', '+s.t;return}}})();
+ function renderSlots(){slotsEl.innerHTML='';if(!day){slotsEl.innerHTML='<p style="grid-column:1/-1;opacity:.6;font-size:14px">Pick a day to see open times.</p>';return}for(const s of free(day)){const b=document.createElement('button');b.type='button';b.className='slot';b.textContent=s.t;b.setAttribute('aria-pressed','false');if(s.off)b.disabled=true;b.onclick=()=>{slot=s.t;[...slotsEl.children].forEach(x=>x.setAttribute('aria-pressed','false'));b.setAttribute('aria-pressed','true');update()};slotsEl.appendChild(b)}}
+ function update(){const s=svcSel.options[svcSel.selectedIndex].text;sum.innerHTML=(day&&slot)?'<b>'+s+'</b><br>'+where.value+' · '+day.toLocaleDateString('en-ZA',{weekday:'long',day:'numeric',month:'long'})+' at '+slot:'Choose a service, day and time.'}
+ svcSel.onchange=update;where.onchange=update;renderSlots();update();
+ form.onsubmit=ev=>{ev.preventDefault();const nm=document.getElementById('nm').value.trim(),cl=document.getElementById('cl').value.replace(/\D/g,'');if(!(day&&slot)){sum.innerHTML='Please pick a day and a time first.';return}if(!nm||cl.length<9){sum.innerHTML='Please add your name and a valid cell number.';return}document.getElementById('donewhen').textContent=sum.innerText.replace(/\n/g,' · ');form.style.display='none';done.style.display='block';done.focus()};
+})();
+</script></body></html>
