@@ -1,0 +1,338 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Freight Impact · Concept</title>
+<meta name="description" content="Concept website for Freight Impact, clearing and forwarding in Durban since 2001.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --hull:#0b2230;--hull2:#12303f;--deep:#071821;
+  --signal:#f26a1b;--signal-ink:#2a0f00;
+  --sea:#2f8f9d;--foam:#e9f1f2;
+  --ink:#12212b;--muted:#566873;--bg:#f4f6f6;--card:#fff;
+  --line:rgba(11,34,48,.12);--line2:rgba(11,34,48,.24);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'IBM Plex Sans',system-ui,-apple-system,'Segoe UI',sans-serif;background:var(--bg);color:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--signal);outline-offset:2px}
+.wrap{max-width:1140px;margin:0 auto;padding:0 20px}
+h1,h2,h3,.disp{font-family:'Barlow Condensed','Arial Narrow',sans-serif;text-transform:uppercase;letter-spacing:.01em;line-height:1.02}
+.mono{font-family:'IBM Plex Mono',ui-monospace,monospace;font-size:12px;letter-spacing:.08em;text-transform:uppercase}
+
+.concept{background:#05090c;color:#fff;font-size:13px;text-align:center;padding:8px 16px}
+.concept b{color:#ffd166}
+
+header{background:var(--hull);color:#fff;position:sticky;top:0;z-index:20;border-bottom:1px solid rgba(255,255,255,.08)}
+.bar{display:flex;align-items:center;justify-content:space-between;gap:16px;height:64px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+.logo .mark{width:34px;height:34px;display:grid;grid-template-columns:repeat(3,1fr);gap:2px;padding:5px;background:var(--signal);border-radius:3px}
+.logo .mark i{background:var(--signal-ink);opacity:.55}
+.logo .mark i:nth-child(2n){opacity:.25}
+.logo .name{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:24px;letter-spacing:.06em;text-transform:uppercase}
+.logo .name span{color:var(--signal)}
+nav{display:flex;gap:26px;font-size:15px;font-weight:500}
+nav a{text-decoration:none;opacity:.82}
+nav a:hover{opacity:1}
+.btn{display:inline-flex;align-items:center;gap:8px;font:600 15px 'IBM Plex Sans',sans-serif;padding:12px 20px;border-radius:3px;text-decoration:none;border:0;cursor:pointer;transition:transform .12s,background .12s}
+.btn:hover{transform:translateY(-1px)}
+.btn-signal{background:var(--signal);color:var(--signal-ink)}
+.btn-ghost{background:transparent;color:#fff;box-shadow:inset 0 0 0 1.5px rgba(255,255,255,.4)}
+.btn-dark{background:var(--hull);color:#fff}
+.bar .btn{padding:9px 16px}
+
+/* hero */
+.hero{background:var(--hull);color:#fff;position:relative;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;background:
+  linear-gradient(180deg,transparent 60%,rgba(7,24,33,.9)),
+  repeating-linear-gradient(90deg,transparent 0 46px,rgba(255,255,255,.035) 46px 48px)}
+.hero .wrap{position:relative;display:grid;grid-template-columns:1.15fr .85fr;gap:48px;padding-top:64px;padding-bottom:0;align-items:end}
+.eyebrow{color:var(--signal);margin-bottom:18px;display:flex;align-items:center;gap:10px}
+.eyebrow::before{content:"";width:28px;height:2px;background:var(--signal)}
+h1{font-size:clamp(46px,7.4vw,92px);font-weight:700}
+h1 em{font-style:normal;color:var(--signal)}
+.lead{font-size:18px;max-width:54ch;margin:22px 0 28px;color:#c9d7dc}
+.cta{display:flex;gap:12px;flex-wrap:wrap;padding-bottom:56px}
+
+/* container stack */
+.stack{display:grid;grid-template-columns:repeat(2,1fr);gap:6px;align-self:end}
+.box{height:88px;border-radius:2px;padding:10px 12px;display:flex;flex-direction:column;justify-content:space-between;position:relative;color:#fff;
+  background-image:repeating-linear-gradient(90deg,rgba(0,0,0,.16) 0 2px,transparent 2px 13px)}
+.box b{font-family:'Barlow Condensed',sans-serif;font-size:26px;font-weight:700;letter-spacing:.04em;line-height:1}
+.box small{font-size:11.5px;opacity:.9;line-height:1.25}
+.b1{background-color:#c9521a}.b2{background-color:#1f6f7c}.b3{background-color:#28485a}.b4{background-color:#8b2f1c}.b5{background-color:#3a7f4f}
+.box.wide{grid-column:span 2}
+.stack .quay{grid-column:span 2;height:10px;background:#05121a;border-top:2px solid var(--signal)}
+
+.strip{background:var(--deep);color:#fff}
+.strip .wrap{display:grid;grid-template-columns:repeat(4,1fr)}
+.stat{padding:22px 0;border-left:1px solid rgba(255,255,255,.1);padding-left:20px}
+.stat:first-child{border-left:0;padding-left:0}
+.stat b{font-family:'Barlow Condensed',sans-serif;font-size:34px;font-weight:700;display:block;line-height:1}
+.stat span{font-size:13.5px;color:#9db2ba}
+
+section{padding:76px 0}
+.head{display:flex;justify-content:space-between;align-items:end;gap:24px;margin-bottom:34px;flex-wrap:wrap}
+h2{font-size:clamp(34px,4.6vw,54px);font-weight:700}
+.sub{color:var(--muted);max-width:52ch}
+.kicker{color:var(--sea);margin-bottom:10px}
+
+/* services */
+.filters{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:22px}
+.chip{font:500 14px 'IBM Plex Sans',sans-serif;padding:8px 14px;border-radius:99px;background:#fff;border:1px solid var(--line2);cursor:pointer;color:var(--ink)}
+.chip[aria-pressed=true]{background:var(--hull);color:#fff;border-color:var(--hull)}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.svc{background:var(--card);border:1px solid var(--line);border-top:4px solid var(--hull);padding:24px 22px;display:flex;flex-direction:column;gap:10px}
+.svc:nth-child(3n+1){border-top-color:var(--signal)}
+.svc:nth-child(3n+2){border-top-color:var(--sea)}
+.svc .mono{color:var(--muted)}
+.svc h3{font-size:26px;font-weight:600}
+.svc p{font-size:15px;color:#3c4d57}
+.svc a{margin-top:auto;font-weight:600;font-size:14.5px;color:var(--hull);text-decoration:none;border-bottom:2px solid var(--signal);align-self:flex-start;padding-top:8px}
+.svc[hidden]{display:none}
+
+/* vehicles */
+.veh{background:var(--hull);color:#fff}
+.veh .kicker{color:var(--signal)}
+.veh .sub{color:#b9c9cf}
+.cmp{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.opt{background:var(--hull2);border:1px solid rgba(255,255,255,.1);padding:26px 24px}
+.opt h3{font-size:30px;font-weight:700;margin-bottom:4px}
+.opt .tag{display:inline-block;background:var(--signal);color:var(--signal-ink);font-weight:600;font-size:12.5px;padding:3px 9px;border-radius:2px;margin-bottom:14px}
+.opt ul{list-style:none;display:grid;gap:9px;font-size:15px;color:#d5e1e5}
+.opt li{padding-left:22px;position:relative}
+.opt li::before{content:"";position:absolute;left:0;top:.62em;width:10px;height:2px;background:var(--signal)}
+.note{font-size:13px;color:var(--muted);margin-top:16px}
+.veh .note{color:#8fa6af}
+
+/* steps */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:0;counter-reset:s}
+.step{padding:22px 22px 22px 0;border-top:2px solid var(--hull);counter-increment:s;margin-right:14px}
+.step::before{content:"0" counter(s);font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:40px;color:var(--signal);line-height:1;display:block;margin-bottom:8px}
+.step h3{font-size:22px;font-weight:600;margin-bottom:6px}
+.step p{font-size:14.5px;color:#3c4d57}
+
+/* quote */
+.quote{background:var(--foam)}
+.qgrid{display:grid;grid-template-columns:.8fr 1.2fr;gap:40px;align-items:start}
+.qside ul{list-style:none;margin-top:20px;display:grid;gap:14px}
+.qside li{display:flex;gap:12px;font-size:15px}
+.qside li b{font-family:'Barlow Condensed',sans-serif;font-size:20px;color:var(--signal);min-width:26px}
+form{background:#fff;border:1px solid var(--line);padding:28px;display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.f{display:flex;flex-direction:column;gap:6px}
+.f.full{grid-column:1/-1}
+label,legend{font-size:13.5px;font-weight:600}
+input,select,textarea{font:400 15.5px 'IBM Plex Sans',sans-serif;padding:11px 12px;border:1px solid var(--line2);border-radius:3px;background:#fff;color:var(--ink);width:100%}
+textarea{min-height:84px;resize:vertical}
+fieldset{border:0;grid-column:1/-1}
+.seg{display:flex;gap:8px;flex-wrap:wrap;margin-top:6px}
+.seg label{font-weight:500;font-size:14.5px;padding:9px 14px;border:1px solid var(--line2);border-radius:3px;cursor:pointer;display:flex;gap:8px;align-items:center}
+.seg input{width:auto;accent-color:var(--signal)}
+.seg label:has(input:checked){background:var(--hull);color:#fff;border-color:var(--hull)}
+.err{color:#b3261e;font-size:13px;display:none}
+.f.bad .err{display:block}.f.bad input,.f.bad select{border-color:#b3261e}
+.done{grid-column:1/-1;background:var(--hull);color:#fff;padding:22px;display:none}
+.done.show{display:block}
+.done h3{font-size:26px;margin-bottom:6px}
+.done pre{font:500 12.5px/1.65 'IBM Plex Mono',monospace;background:var(--deep);padding:14px;margin-top:12px;white-space:pre-wrap;color:#d5e1e5;border-left:3px solid var(--signal)}
+.done p{font-size:14px;color:#b9c9cf}
+
+/* contact */
+.cgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.ccard{background:#fff;border:1px solid var(--line);padding:24px}
+.ccard .mono{color:var(--sea);margin-bottom:8px}
+.ccard b{font-family:'Barlow Condensed',sans-serif;font-size:28px;font-weight:700;display:block;line-height:1.1}
+.ccard a{text-decoration:none}
+.ccard p{font-size:14.5px;color:var(--muted);margin-top:6px}
+
+footer{background:var(--deep);color:#9db2ba;font-size:13.5px;padding:28px 0}
+footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.callbar{display:none}
+
+@media (max-width:900px){
+  nav{display:none}
+  .hero .wrap{grid-template-columns:1fr;gap:28px;padding-top:44px}
+  .cta{padding-bottom:8px}
+  .strip .wrap{grid-template-columns:1fr 1fr}
+  .stat:nth-child(3){border-left:0;padding-left:0}
+  .grid,.cgrid{grid-template-columns:1fr}
+  .cmp,.qgrid{grid-template-columns:1fr}
+  .steps{grid-template-columns:1fr 1fr}
+  form{grid-template-columns:1fr;padding:20px}
+  section{padding:56px 0}
+  body{padding-bottom:64px}
+  .bar .btn{display:none}
+  .callbar{display:grid;grid-template-columns:1fr 1fr;position:fixed;bottom:0;left:0;right:0;z-index:30}
+  .callbar a{padding:16px;text-align:center;font-weight:600;text-decoration:none}
+  .callbar a:first-child{background:var(--hull);color:#fff}
+  .callbar a:last-child{background:var(--signal);color:var(--signal-ink)}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn{transition:none}}
+</style>
+</head>
+<body>
+<div class="concept"><b>Concept design</b> prepared by Deshlan Pillay for Freight Impact. This is not the official website. Services and contact details come from freightimpact.co.za; anything marked "sample" is to be confirmed.</div>
+
+<header><div class="wrap bar">
+  <a class="logo" href="#top" aria-label="Freight Impact home"><span class="mark" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></span><span class="name">Freight <span>Impact</span></span></a>
+  <nav aria-label="Main"><a href="#services">Services</a><a href="#vehicles">Car shipping</a><a href="#process">How it works</a><a href="#contact">Contact</a></nav>
+  <a class="btn btn-signal" href="#quote">Request a quote</a>
+</div></header>
+
+<main id="top">
+<div class="hero"><div class="wrap">
+  <div>
+    <p class="mono eyebrow">Clearing &amp; forwarding · Durban · Est. 2001</p>
+    <h1>Your cargo, cleared and <em>delivered.</em></h1>
+    <p class="lead">Customs clearing and freight forwarding through the Port of Durban for importers and exporters. Containers, breakbulk, bulk and vehicles, by sea, air, road and rail.</p>
+    <div class="cta"><a class="btn btn-signal" href="#quote">Request a quote</a><a class="btn btn-ghost" href="tel:+27313320192">Call 031 332 0192</a></div>
+  </div>
+  <div class="stack" aria-label="Cargo types we clear">
+    <div class="box b1"><b>FCL</b><small>Full container loads</small></div>
+    <div class="box b2"><b>LCL</b><small>Shared containers</small></div>
+    <div class="box b3 wide"><b>BREAKBULK</b><small>Machinery, steel and cargo too big for a box</small></div>
+    <div class="box b5"><b>BULK</b><small>Loose cargo by the shipload</small></div>
+    <div class="box b4"><b>RORO</b><small>Vehicles driven aboard</small></div>
+    <div class="quay"></div>
+  </div>
+</div></div>
+
+<div class="strip"><div class="wrap">
+  <div class="stat"><b>2001</b><span>Clearing cargo in Durban since</span></div>
+  <div class="stat"><b>5</b><span>Cargo types: FCL, LCL, breakbulk, bulk, RORO</span></div>
+  <div class="stat"><b>4</b><span>Freight modes: sea, air, road, rail</span></div>
+  <div class="stat"><b>Door</b><span>Delivered from supplier to your doorstep</span></div>
+</div></div>
+
+<section id="services"><div class="wrap">
+  <div class="head"><div><p class="mono kicker">What we handle</p><h2>Services</h2></div><p class="sub">One team from the supplier's door to yours. Pick what you're moving to see the services that apply.</p></div>
+  <div class="filters" role="group" aria-label="Filter services">
+    <button class="chip" aria-pressed="true" data-f="all">Everything</button>
+    <button class="chip" aria-pressed="false" data-f="import">Importing</button>
+    <button class="chip" aria-pressed="false" data-f="export">Exporting</button>
+    <button class="chip" aria-pressed="false" data-f="vehicle">Shipping a vehicle</button>
+    <button class="chip" aria-pressed="false" data-f="africa">Into Africa</button>
+  </div>
+  <div class="grid">
+    <article class="svc" data-t="import export"><p class="mono">01 · Customs</p><h3>Customs clearing &amp; forwarding</h3><p>Clearing for FCL containerised, LCL, breakbulk, bulk and RORO cargo, backed by a worldwide forwarding network.</p><a href="#quote" data-pick="Customs clearing">Get a clearing quote</a></article>
+    <article class="svc" data-t="import export"><p class="mono">02 · Shipping</p><h3>Imports &amp; exports</h3><p>We collect the cargo, pack the container, load the vessel and see it through to the destination port.</p><a href="#quote" data-pick="Import / export shipping">Quote a shipment</a></article>
+    <article class="svc" data-t="import export africa"><p class="mono">03 · Freight</p><h3>Sea, air, road &amp; rail</h3><p>Competitive freight rates on all four modes, so the cargo moves the way that suits its size and deadline.</p><a href="#quote" data-pick="Freight (sea / air / road / rail)">Ask for rates</a></article>
+    <article class="svc" data-t="import export"><p class="mono">04 · Storage</p><h3>Warehousing</h3><p>Daily cargo handling: unpacking, repacking and storage, with distribution when you're ready.</p><a href="#quote" data-pick="Warehousing">Ask about space</a></article>
+    <article class="svc" data-t="africa export"><p class="mono">05 · Cross-border</p><h3>Bonded &amp; over-border cargo</h3><p>Bonded cargo moved through South African ports into Africa, using customs-registered removers and agents at the exit border.</p><a href="#quote" data-pick="Bonded / over-border cargo">Plan a cross-border move</a></article>
+    <article class="svc" data-t="vehicle import export"><p class="mono">06 · Vehicles</p><h3>Container car shipping</h3><p>Your vehicle secured in a 20 or 40-foot container, with room for household goods. Pickup and delivery anywhere in South Africa.</p><a href="#vehicles">Compare with RORO</a></article>
+    <article class="svc" data-t="vehicle import export"><p class="mono">07 · Vehicles</p><h3>RORO car shipping</h3><p>Vehicles driven onto the ship's lower decks. Usually the cheapest and quickest way to load, where the port offers it.</p><a href="#vehicles">Compare with container</a></article>
+    <article class="svc" data-t="import export"><p class="mono">08 · Cover</p><h3>Insurance &amp; reverse deliveries</h3><p>Cargo insurance arranged with the shipment, plus returns handled back to the supplier when needed.</p><a href="#quote" data-pick="Insurance / reverse delivery">Ask about cover</a></article>
+  </div>
+</div></section>
+
+<section class="veh" id="vehicles"><div class="wrap">
+  <div class="head"><div><p class="mono kicker">Shipping a car?</p><h2>Container or RORO</h2></div><p class="sub">Two ways to ship a vehicle. Tell us the route and we'll confirm which one the port supports.</p></div>
+  <div class="cmp">
+    <div class="opt"><h3>Container</h3><span class="tag">Most protected</span><ul><li>Enclosed 20 or 40-foot container</li><li>Secured with cables and straps</li><li>Household goods can travel with the vehicle</li><li>Pickup and delivery anywhere in South Africa</li></ul></div>
+    <div class="opt"><h3>RORO</h3><span class="tag">Usually cheapest</span><ul><li>Vehicle is driven onto the ship's lower deck</li><li>Fastest to load and offload</li><li>Vehicle only, nothing packed inside</li><li>Depends on the port, so check availability first</li></ul></div>
+  </div>
+  <p class="note">Summarised from the car shipping details on the current Freight Impact website.</p>
+</div></section>
+
+<section id="process"><div class="wrap">
+  <div class="head"><div><p class="mono kicker">How it works</p><h2>From quote to doorstep</h2></div></div>
+  <div class="steps">
+    <div class="step"><h3>Send the details</h3><p>Cargo, route and dates through the quote form, by email or by phone.</p></div>
+    <div class="step"><h3>Get your rate</h3><p>A written quote covering freight, clearing and delivery.</p></div>
+    <div class="step"><h3>We clear it</h3><p>Documents and customs handled, with senior management a phone call away.</p></div>
+    <div class="step"><h3>Delivered</h3><p>Cargo delivered to your door, or stored in the warehouse until you need it.</p></div>
+  </div>
+  <p class="note">Sample process, to be confirmed with Freight Impact.</p>
+</div></section>
+
+<section class="quote" id="quote"><div class="wrap qgrid">
+  <div class="qside">
+    <p class="mono kicker">Request a quote</p><h2>Tell us what's moving</h2>
+    <p class="sub" style="margin-top:14px">The current site's form only asks for a name and a message. This one collects what a forwarder needs to price the job, so there's no back-and-forth.</p>
+    <ul><li><b>1</b><span>Every enquiry gets a reference number.</span></li><li><b>2</b><span>The details arrive at info@freightimpact.co.za as one tidy email.</span></li><li><b>3</b><span>Works on a phone, for clients standing in a warehouse.</span></li></ul>
+  </div>
+  <form id="qf" novalidate>
+    <fieldset><legend>Direction</legend><div class="seg"><label><input type="radio" name="dir" value="Import" checked>Import</label><label><input type="radio" name="dir" value="Export">Export</label><label><input type="radio" name="dir" value="Cross-border">Cross-border</label></div></fieldset>
+    <div class="f"><label for="svc">Service</label><select id="svc" name="svc"><option>Customs clearing</option><option>Import / export shipping</option><option>Freight (sea / air / road / rail)</option><option>Warehousing</option><option>Bonded / over-border cargo</option><option>Car shipping (container)</option><option>Car shipping (RORO)</option><option>Insurance / reverse delivery</option></select></div>
+    <div class="f"><label for="cargo">Cargo type</label><select id="cargo" name="cargo"><option>FCL (full container)</option><option>LCL (shared container)</option><option>Breakbulk</option><option>Bulk</option><option>RORO / vehicle</option><option>Air freight</option><option>Not sure</option></select></div>
+    <div class="f"><label for="from">From (port or city)</label><input id="from" name="from" placeholder="e.g. Shanghai" required><span class="err">Where is the cargo coming from?</span></div>
+    <div class="f"><label for="to">To (port or city)</label><input id="to" name="to" placeholder="e.g. Durban" required><span class="err">Where is the cargo going?</span></div>
+    <div class="f full"><label for="what">What are you shipping?</label><textarea id="what" name="what" placeholder="e.g. 1 x 40ft container of furniture, about 18 tons, ready mid-December"></textarea></div>
+    <div class="f"><label for="nm">Your name</label><input id="nm" name="nm" autocomplete="name" required><span class="err">Please add your name.</span></div>
+    <div class="f"><label for="co">Company</label><input id="co" name="co" autocomplete="organization"></div>
+    <div class="f"><label for="em">Email</label><input id="em" name="em" type="email" autocomplete="email" required><span class="err">Please add a valid email.</span></div>
+    <div class="f"><label for="tel">Phone</label><input id="tel" name="tel" type="tel" autocomplete="tel"></div>
+    <div class="f full"><button class="btn btn-signal" type="submit" style="justify-content:center">Send quote request</button></div>
+    <div class="done" id="done" role="status" aria-live="polite"><h3>Request <span id="ref"></span> ready</h3><p>Demo only: nothing was sent. On the live site this email would go to info@freightimpact.co.za and a copy to the client.</p><pre id="preview"></pre></div>
+  </form>
+</div></section>
+
+<section id="contact"><div class="wrap">
+  <div class="head"><div><p class="mono kicker">Contact</p><h2>Talk to the team</h2></div><p class="sub">Senior management is easy to reach. Call, email or come past the office on the Embankment.</p></div>
+  <div class="cgrid">
+    <div class="ccard"><p class="mono">Phone</p><b><a href="tel:+27313320192">031 332 0192</a></b><p>Sample hours: Mon to Fri, 08:00 to 16:30</p></div>
+    <div class="ccard"><p class="mono">Email</p><b style="font-size:22px"><a href="mailto:info@freightimpact.co.za">info@freightimpact.co.za</a></b><p>Quotes, documents and shipment queries</p></div>
+    <div class="ccard"><p class="mono">Office</p><b style="font-size:22px">73 Victoria Embankment</b><p>Durban Central, Durban, 4001. <a href="https://www.google.com/maps/search/?api=1&query=73+Victoria+Embankment+Durban" target="_blank" rel="noopener" style="text-decoration:underline">Open in Maps</a></p></div>
+  </div>
+</div></section>
+</main>
+
+<footer><div class="wrap"><span>© <span id="yr"></span> Freight Impact · Clearing &amp; forwarding · Durban</span><span>Concept by Deshlan Pillay</span></div></footer>
+<div class="callbar"><a href="tel:+27313320192">Call</a><a href="#quote">Get a quote</a></div>
+
+<script>
+document.getElementById('yr').textContent = new Date().getFullYear();
+
+// service filter
+const chips = [...document.querySelectorAll('.chip')], cards = [...document.querySelectorAll('.svc')];
+chips.forEach(c => c.addEventListener('click', () => {
+  chips.forEach(x => x.setAttribute('aria-pressed', x === c));
+  const f = c.dataset.f;
+  cards.forEach(k => k.hidden = f !== 'all' && !k.dataset.t.split(' ').includes(f));
+}));
+
+// "get a quote" links pre-select the service
+document.querySelectorAll('[data-pick]').forEach(a => a.addEventListener('click', () => {
+  document.getElementById('svc').value = a.dataset.pick;
+}));
+
+// quote form: validate, then show a preview of the email (demo never sends)
+const form = document.getElementById('qf'), done = document.getElementById('done');
+form.addEventListener('submit', e => {
+  e.preventDefault();
+  let ok = true, first = null;
+  form.querySelectorAll('[required]').forEach(i => {
+    const bad = !i.value.trim() || (i.type === 'email' && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(i.value.trim()));
+    i.closest('.f').classList.toggle('bad', bad);
+    i.setAttribute('aria-invalid', bad);
+    if (bad) { ok = false; first = first || i; }
+  });
+  if (!ok) { done.classList.remove('show'); first.focus(); return; }
+  const d = Object.fromEntries(new FormData(form));
+  const now = new Date(), p = n => String(n).padStart(2, '0');
+  const ref = 'FI-' + String(now.getFullYear()).slice(2) + p(now.getMonth() + 1) + p(now.getDate()) + '-' + Math.floor(1000 + Math.random() * 9000);
+  document.getElementById('ref').textContent = ref;
+  document.getElementById('preview').textContent =
+`To: info@freightimpact.co.za
+Subject: Quote request ${ref}: ${d.dir}, ${d.from} to ${d.to}
+
+Direction:  ${d.dir}
+Service:    ${d.svc}
+Cargo type: ${d.cargo}
+Route:      ${d.from} -> ${d.to}
+Details:    ${d.what || '(none given)'}
+
+From:       ${d.nm}${d.co ? ', ' + d.co : ''}
+Email:      ${d.em}
+Phone:      ${d.tel || '(none given)'}`;
+  done.classList.add('show');
+  done.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+});
+</script>
+</body>
+</html>
