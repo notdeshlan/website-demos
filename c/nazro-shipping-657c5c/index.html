@@ -1,0 +1,818 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Nazro Shipping · Concept</title>
+<meta name="description" content="Concept website for Nazro Shipping: carrier booking, shipping documentation and exception management for exporters, with specialist handling of fresh fruit, wine and liquid bulk, dangerous goods and project cargo.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --red:#cc1616;--red-dk:#a81010;--red-soft:#fdecec;
+  --black:#0e0e0e;--char:#1b1b1b;--char2:#262626;
+  --ink:#1d2024;--muted:#5f666d;--bg:#f6f6f6;--card:#fff;
+  --line:rgba(20,20,20,.1);--line2:rgba(20,20,20,.22);
+  --ok:#1d7f4e;--cold:#1f78b4;--wine:#7b1e3a;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font:16px/1.6 'Inter',system-ui,-apple-system,'Segoe UI',sans-serif;color:var(--ink);background:var(--bg);-webkit-font-smoothing:antialiased}
+a{color:inherit}
+img{max-width:100%;display:block}
+:focus-visible{outline:3px solid var(--red);outline-offset:2px}
+.wrap{max-width:1160px;margin:0 auto;padding:0 20px}
+h1,h2,h3{font-family:'Poppins',system-ui,sans-serif;line-height:1.15;letter-spacing:-.01em}
+.eyebrow{font:600 12.5px 'Inter',sans-serif;letter-spacing:.12em;text-transform:uppercase;color:var(--red)}
+
+.concept{background:#000;color:#fff;font-size:13px;text-align:center;padding:8px 16px}
+.concept b{color:#ffd166}
+
+/* header */
+header{position:sticky;top:0;z-index:40;background:var(--black);color:#fff;border-bottom:1px solid rgba(255,255,255,.08)}
+.topbar{background:#000;font-size:13px;color:#bdbdbd}
+.topbar .wrap{display:flex;gap:20px;justify-content:flex-end;padding-top:6px;padding-bottom:6px;flex-wrap:wrap}
+.topbar a{text-decoration:none}.topbar a:hover{color:#fff}
+.bar{display:flex;align-items:center;justify-content:space-between;height:68px;gap:16px}
+.logo{display:flex;align-items:center;text-decoration:none}
+.logo img{height:40px;width:auto}
+.logo .word{font:700 24px 'Poppins',sans-serif;letter-spacing:.06em;margin-right:-118px;position:relative;z-index:1}
+nav.main{display:flex;gap:4px;align-items:center}
+nav.main a{text-decoration:none;font:500 15px 'Inter',sans-serif;padding:8px 12px;border-radius:4px;color:#e6e6e6}
+nav.main a:hover{color:#fff;background:rgba(255,255,255,.06)}
+nav.main a[aria-current=page]{color:#fff;box-shadow:inset 0 -2px 0 var(--red)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font:600 15px 'Inter',sans-serif;padding:12px 20px;border-radius:4px;text-decoration:none;border:0;cursor:pointer;transition:background .15s,transform .15s}
+.btn:hover{transform:translateY(-1px)}
+.btn-red{background:var(--red);color:#fff}.btn-red:hover{background:var(--red-dk)}
+.btn-ghost{background:transparent;color:#fff;box-shadow:inset 0 0 0 1.5px rgba(255,255,255,.45)}
+.btn-line{background:#fff;color:var(--ink);box-shadow:inset 0 0 0 1.5px var(--line2)}
+.bar .btn{padding:9px 16px}
+.menu-btn{display:none;background:none;border:0;color:#fff;padding:8px;cursor:pointer}
+.menu-btn svg{width:26px;height:26px}
+
+/* views */
+[data-view]{display:none}
+[data-view].on{display:block;animation:fade .25s ease}
+@keyframes fade{from{opacity:.3}to{opacity:1}}
+
+/* hero */
+.hero{position:relative;color:#fff;background:#000 url(img/hero.jpg) center/cover no-repeat;min-height:560px;display:flex;align-items:flex-end}
+.hero::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.86) 0%,rgba(0,0,0,.6) 48%,rgba(0,0,0,.18) 100%)}
+.hero .wrap{position:relative;padding-top:80px;padding-bottom:64px;width:100%}
+.hero h1{font-size:clamp(38px,5.6vw,64px);max-width:15ch;margin:14px 0 18px}
+.hero h1 em{font-style:normal;color:#ff3b3b}
+.hero .eyebrow,.page-hero .eyebrow{color:#ff8a8a}
+.hero p.lead{font-size:18.5px;max-width:52ch;color:#e2e2e2;margin-bottom:28px}
+.cta{display:flex;gap:12px;flex-wrap:wrap}
+.strip{background:var(--char);color:#fff}
+.strip .wrap{display:grid;grid-template-columns:repeat(4,1fr)}
+.strip div{padding:20px 18px;border-left:1px solid rgba(255,255,255,.08);font-size:14.5px;color:#cfcfcf}
+.strip div:first-child{border-left:0;padding-left:0}
+.strip b{display:block;color:#fff;font:600 16px 'Poppins',sans-serif;margin-bottom:2px}
+
+section.block{padding:76px 0}
+section.alt{background:#fff}
+section.dark{background:var(--char);color:#fff}
+.head{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;margin-bottom:32px;flex-wrap:wrap}
+.head h2{font-size:clamp(28px,3.6vw,40px);margin-top:8px}
+.sub{color:var(--muted);max-width:56ch}
+.dark .sub{color:#bdbdbd}
+
+/* speciality cards */
+.spec-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.spec{background:#fff;border:1px solid var(--line);border-radius:6px;overflow:hidden;text-decoration:none;display:flex;flex-direction:column;transition:transform .15s,box-shadow .15s}
+.spec:hover{transform:translateY(-3px);box-shadow:0 14px 30px rgba(0,0,0,.09)}
+.spec .ph{aspect-ratio:4/3;background:#222 center/cover no-repeat;position:relative}
+.spec .tag{position:absolute;left:12px;top:12px;background:rgba(0,0,0,.72);color:#fff;font-size:12px;font-weight:600;padding:3px 9px;border-radius:3px}
+.spec .bd{padding:18px 18px 20px;display:flex;flex-direction:column;gap:8px;flex:1}
+.spec h3{font-size:20px}
+.spec p{font-size:14.5px;color:var(--muted)}
+.spec .go{margin-top:auto;font-weight:600;font-size:14.5px;color:var(--red)}
+.dg-ph{background:linear-gradient(135deg,#2b2b2b,#111)!important;display:grid;place-items:center}
+.diamond{width:96px;height:96px;transform:rotate(45deg);background:#fff;border:6px solid #111;outline:3px solid #fff;display:grid;place-items:center}
+.diamond span{transform:rotate(-45deg);font:800 30px 'Poppins',sans-serif;color:var(--red)}
+
+/* services list */
+.svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:6px;overflow:hidden}
+.svc{background:#fff;padding:26px 24px}
+.svc .n{font:700 14px 'Poppins',sans-serif;color:var(--red);margin-bottom:8px}
+.svc h3{font-size:19px;margin-bottom:6px}
+.svc p{font-size:15px;color:var(--muted)}
+.addons{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:22px}
+.addon{background:var(--char2);border-radius:6px;padding:18px 18px}
+.addon b{display:block;font:600 16px 'Poppins',sans-serif;margin-bottom:4px}
+.addon span{font-size:14.5px;color:#c4c4c4}
+
+/* steps */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;counter-reset:s}
+.step{counter-increment:s;border-top:3px solid var(--red);padding-top:16px}
+.step::before{content:counter(s,decimal-leading-zero);font:700 34px 'Poppins',sans-serif;color:var(--red);display:block;line-height:1;margin-bottom:10px}
+.step h3{font-size:18px;margin-bottom:6px}
+.step p{font-size:15px;color:var(--muted)}
+
+/* split */
+.split{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center}
+.split img{border-radius:6px;width:100%;aspect-ratio:4/3;object-fit:cover}
+.checks{list-style:none;display:grid;gap:10px;margin:18px 0 24px}
+.checks li{padding-left:28px;position:relative}
+.checks li::before{content:"";position:absolute;left:0;top:.35em;width:16px;height:16px;border-radius:50%;background:var(--red-soft);box-shadow:inset 0 0 0 5px var(--red)}
+
+.cta-band{background:var(--red);color:#fff;padding:44px 0}
+.cta-band .wrap{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
+.cta-band h2{font-size:clamp(24px,3vw,32px)}
+.cta-band .btn{background:#fff;color:var(--red)}
+
+/* speciality page */
+.page-hero{position:relative;color:#fff;background:#111 center/cover no-repeat;padding:96px 0 56px}
+.page-hero::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.88),rgba(0,0,0,.45))}
+.page-hero .wrap{position:relative}
+.page-hero h1{font-size:clamp(34px,4.6vw,52px);margin:10px 0 14px;max-width:18ch}
+.page-hero p{max-width:58ch;color:#ddd;font-size:17.5px}
+.crumbs{font-size:13.5px;color:#bbb}.crumbs a{text-decoration:none;color:#fff}
+.detail{display:grid;grid-template-columns:1.25fr .75fr;gap:40px;align-items:start}
+.detail h2{font-size:26px;margin:0 0 12px}
+.detail h3{font-size:18px;margin:26px 0 8px}
+.detail p{color:#3f464c;margin-bottom:12px}
+.facts{background:#fff;border:1px solid var(--line);border-radius:6px;padding:22px;position:sticky;top:120px}
+.facts h3{font-size:16px;margin:0 0 12px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);font-family:'Inter',sans-serif}
+.facts dl{display:grid;grid-template-columns:auto 1fr;gap:8px 14px;font-size:14.5px;margin-bottom:18px}
+.facts dt{color:var(--muted)}.facts dd{font-weight:600}
+.facts .btn{width:100%}
+.doclist{list-style:none;display:grid;gap:8px}
+.doclist li{background:#fff;border:1px solid var(--line);border-radius:5px;padding:11px 14px;font-size:15px;display:flex;gap:10px}
+.doclist li b{min-width:0}
+.doclist li span{color:var(--muted)}
+.sample{font-size:13px;color:var(--muted);background:#fff8e1;border:1px dashed #e0b84c;border-radius:4px;padding:8px 12px;margin-top:18px}
+
+/* compliance */
+.comp{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.comp .c{background:#fff;border:1px solid var(--line);border-radius:6px;padding:20px}
+.comp .c .k{font-size:12.5px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);font-weight:600}
+.comp .c b{display:block;font:600 18px 'Poppins',sans-serif;margin:6px 0 4px}
+.comp .c p{font-size:14.5px;color:var(--muted)}
+.ph-val{color:#b07a00!important}
+.comp a.dl{display:inline-block;margin-top:8px;font-weight:600;color:var(--red);text-decoration:none;font-size:14.5px}
+
+/* tools */
+.tools{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:start}
+.panel{background:#fff;border:1px solid var(--line);border-radius:6px;padding:24px}
+.panel h3{font-size:20px;margin-bottom:6px}
+.panel>p{color:var(--muted);font-size:15px;margin-bottom:14px}
+.seg{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:14px}
+.seg button{font:500 14px 'Inter',sans-serif;padding:7px 12px;border-radius:99px;border:1px solid var(--line2);background:#fff;cursor:pointer;color:var(--ink)}
+.seg button[aria-pressed=true]{background:var(--black);color:#fff;border-color:var(--black)}
+.check{list-style:none;display:grid;gap:6px}
+.check label{display:flex;gap:10px;align-items:flex-start;padding:9px 12px;border:1px solid var(--line);border-radius:5px;cursor:pointer;font-size:15px}
+.check input{margin-top:4px;accent-color:var(--red);width:16px;height:16px;flex:none}
+.check label:has(input:checked){background:#f3faf6;border-color:#bfe3cf}
+.check small{display:block;color:var(--muted);font-size:13px}
+.progress{height:6px;background:#eee;border-radius:9px;margin:4px 0 14px;overflow:hidden}
+.progress i{display:block;height:100%;background:var(--ok);width:0;transition:width .2s}
+.inco table{width:100%;border-collapse:collapse;font-size:14px}
+.inco th,.inco td{padding:8px 8px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+.inco th{font-size:12px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
+.inco td:first-child{font:700 14px 'Poppins',sans-serif;color:var(--red);white-space:nowrap}
+.inco tr.sea td:first-child::after{content:" sea";font:500 10.5px 'Inter',sans-serif;color:var(--muted);vertical-align:super}
+.track{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.track a{display:block;text-decoration:none;border:1px solid var(--line);border-radius:5px;padding:12px;font-weight:600;font-size:14.5px;text-align:center;background:#fff}
+.track a:hover{border-color:var(--red);color:var(--red)}
+
+/* quote */
+.qgrid{display:grid;grid-template-columns:.75fr 1.25fr;gap:40px;align-items:start}
+.qside ul{list-style:none;display:grid;gap:14px;margin-top:22px}
+.qside li{display:flex;gap:12px;font-size:15px}
+.qside li b{font:700 18px 'Poppins',sans-serif;color:var(--red);min-width:24px}
+form{background:#fff;border:1px solid var(--line);border-radius:6px;padding:26px}
+.fs{border:0;margin-bottom:6px}
+.fs legend{font:600 15px 'Poppins',sans-serif;margin-bottom:12px;display:flex;gap:10px;align-items:center}
+.fs legend span{display:inline-grid;place-items:center;width:24px;height:24px;border-radius:50%;background:var(--black);color:#fff;font-size:12.5px}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:14px}
+.row.three{grid-template-columns:1fr 1fr 1fr}
+.f{display:flex;flex-direction:column;gap:5px;min-width:0}
+.f.full{grid-column:1/-1}
+label.l{font-size:13.5px;font-weight:600}
+label.l small{font-weight:400;color:var(--muted)}
+input,select,textarea{font:400 15.5px 'Inter',sans-serif;padding:10px 12px;border:1px solid var(--line2);border-radius:4px;background:#fff;color:var(--ink);width:100%}
+textarea{min-height:80px;resize:vertical}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chips label{display:flex;align-items:center;gap:7px;padding:8px 13px;border:1px solid var(--line2);border-radius:4px;cursor:pointer;font-size:14.5px;font-weight:500}
+.chips input{width:auto;accent-color:var(--red)}
+.chips label:has(input:checked){background:var(--black);color:#fff;border-color:var(--black)}
+.cond{display:none;background:var(--red-soft);border-radius:5px;padding:14px;margin-bottom:14px}
+.cond.on{display:block}
+.cond.cold{background:#eaf3fb}
+.cond .row{margin-bottom:0}
+.err{color:#b3261e;font-size:13px;display:none}
+.f.bad .err{display:block}.f.bad input,.f.bad select{border-color:#b3261e}
+.done{display:none;background:var(--char);color:#fff;border-radius:6px;padding:22px;margin-top:16px}
+.done.show{display:block}
+.done h3{font-size:22px;margin-bottom:4px}
+.done p{color:#c9c9c9;font-size:14.5px}
+.done pre{font:500 12.5px/1.6 ui-monospace,Consolas,monospace;background:#000;border-left:3px solid var(--red);padding:14px;margin-top:12px;white-space:pre-wrap;color:#e6e6e6}
+.done .cta{margin-top:14px}
+
+/* contact */
+.cgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.ccard{background:#fff;border:1px solid var(--line);border-radius:6px;padding:24px}
+.ccard .k{font-size:12.5px;text-transform:uppercase;letter-spacing:.08em;color:var(--red);font-weight:600}
+.ccard b{display:block;font:600 21px 'Poppins',sans-serif;margin:6px 0}
+.ccard a{text-decoration:none}
+.ccard p{font-size:14.5px;color:var(--muted)}
+
+footer{background:var(--black);color:#9d9d9d;font-size:14px;padding:44px 0 26px}
+.fgrid{display:grid;grid-template-columns:1.3fr 1fr 1fr 1fr;gap:28px}
+footer h4{color:#fff;font:600 15px 'Poppins',sans-serif;margin-bottom:10px}
+footer ul{list-style:none;display:grid;gap:6px}
+footer a{text-decoration:none}footer a:hover{color:#fff}
+.fbase{border-top:1px solid rgba(255,255,255,.08);margin-top:28px;padding-top:16px;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+.callbar{display:none}
+
+@media (max-width:980px){
+  .spec-grid{grid-template-columns:1fr 1fr}
+  .svc-grid,.addons,.comp,.cgrid{grid-template-columns:1fr 1fr}
+  .steps{grid-template-columns:1fr 1fr}
+  .detail,.split,.qgrid,.tools{grid-template-columns:1fr}
+  .facts{position:static}
+  .fgrid{grid-template-columns:1fr 1fr}
+}
+@media (max-width:860px){
+  .menu-btn{display:block}
+  nav.main{display:none;position:absolute;left:0;right:0;top:100%;background:var(--black);flex-direction:column;align-items:stretch;padding:8px 12px 16px;border-bottom:1px solid rgba(255,255,255,.1)}
+  nav.main.open{display:flex}
+  nav.main a{padding:12px}
+  .bar{position:relative}
+  .bar>.btn{display:none}
+  .topbar{display:none}
+}
+@media (max-width:640px){
+  body{padding-bottom:62px}
+  .spec-grid,.svc-grid,.addons,.comp,.cgrid,.steps,.fgrid,.track{grid-template-columns:1fr}
+  .strip .wrap{grid-template-columns:1fr 1fr}
+  .strip div:nth-child(3){border-left:0;padding-left:0}
+  .row,.row.three{grid-template-columns:1fr}
+  section.block{padding:54px 0}
+  .hero{min-height:500px}
+  form,.panel{padding:18px}
+  .logo .word{font-size:21px;margin-right:-104px}.logo img{height:35px}
+  .callbar{display:grid;grid-template-columns:1fr 1fr 1fr;position:fixed;left:0;right:0;bottom:0;z-index:50}
+  .callbar a{padding:15px 6px;text-align:center;font-weight:600;font-size:14.5px;text-decoration:none}
+  .callbar a:nth-child(1){background:var(--char);color:#fff}
+  .callbar a:nth-child(2){background:#1fa855;color:#fff}
+  .callbar a:nth-child(3){background:var(--red);color:#fff}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<div class="concept"><b>Concept design</b> prepared by Deshlan Pillay for Nazro Shipping. Not the official website. Services and contact details come from nazro.co.za; anything marked "sample" is to be confirmed.</div>
+
+<header>
+  <div class="topbar"><div class="wrap">
+    <a href="mailto:info@nazro.co.za">info@nazro.co.za</a>
+    <a href="tel:+27728398853">+27 72 839 8853</a>
+    <span>Mon to Fri, 08:00 to 17:00 <small>(sample)</small></span>
+  </div></div>
+  <div class="wrap bar">
+    <a class="logo" href="#/" aria-label="Nazro Shipping home"><img src="img/logo.png" alt="Nazro Shipping (Pty) Ltd" width="820" height="205"></a>
+    <button class="menu-btn" aria-label="Open menu" aria-expanded="false" aria-controls="nav"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+    <nav class="main" id="nav" aria-label="Main">
+      <a href="#/">Home</a>
+      <a href="#/services">Services</a>
+      <a href="#/specialities">Specialities</a>
+      <a href="#/tools">Exporter tools</a>
+      <a href="#/compliance">Compliance</a>
+      <a href="#/contact">Contact</a>
+    </nav>
+    <a class="btn btn-red" href="#/quote">Request a quote</a>
+  </div>
+</header>
+
+<main>
+
+<!-- ============ HOME ============ -->
+<div data-view="home">
+  <div class="hero"><div class="wrap">
+    <p class="eyebrow">Carrier booking &amp; shipping documentation · Johannesburg</p>
+    <h1>Your bookings, handled. Your cargo, <em>on time.</em></h1>
+    <p class="lead">Nazro Shipping books, documents and follows up your sea and air shipments with every carrier, so you deal with one point of contact instead of ten. Specialists in fresh fruit, wine and liquid bulk, dangerous goods and project cargo.</p>
+    <div class="cta"><a class="btn btn-red" href="#/quote">Request a quote</a><a class="btn btn-ghost" href="tel:+27728398853">Call 072 839 8853</a></div>
+  </div></div>
+  <div class="strip"><div class="wrap">
+    <div><b>Carrier booking</b>Compliant, accurate, submitted on time</div>
+    <div><b>VGM filing</b>Container weights verified and sent</div>
+    <div><b>Documentation</b>B/L, sea waybill and DG paperwork</div>
+    <div><b>Exception management</b>Disruptions handled before they cost you</div>
+  </div></div>
+
+  <section class="block"><div class="wrap">
+    <div class="head"><div><p class="eyebrow">What we specialise in</p><h2>Cargo that needs more than a booking</h2></div><p class="sub">Some cargo can't wait, can't get warm or can't be handled by just anyone. Pick yours to see how we handle it.</p></div>
+    <div class="spec-grid">
+      <a class="spec" href="#/fresh-fruit"><div class="ph" style="background-image:url(img/reefer.jpg)"><span class="tag">Reefer</span></div><div class="bd"><h3>Fresh fruit</h3><p>Reefer bookings, temperature settings and the export paperwork that has to be right first time.</p><span class="go">Fresh fruit exports →</span></div></a>
+      <a class="spec" href="#/liquid-bulk"><div class="ph" style="background-image:url(img/liquid-bulk.jpg)"><span class="tag">Flexitank · ISO tank</span></div><div class="bd"><h3>Wine &amp; liquid bulk</h3><p>Bulk wine and other liquids moved safely, with the quality and integrity of the product protected.</p><span class="go">Liquid bulk →</span></div></a>
+      <a class="spec" href="#/dangerous-goods"><div class="ph dg-ph"><div class="diamond"><span>DG</span></div></div><div class="bd"><h3>Dangerous goods</h3><p>Hazardous cargo by air and sea, declared, packed and labelled to the rules.</p><span class="go">Dangerous goods →</span></div></a>
+      <a class="spec" href="#/project-cargo"><div class="ph" style="background-image:url(img/project-cargo.jpg)"><span class="tag">Out of gauge</span></div><div class="bd"><h3>Project cargo</h3><p>Oversized and heavy items, from machinery to aircraft, planned piece by piece.</p><span class="go">Project cargo →</span></div></a>
+    </div>
+  </div></section>
+
+  <section class="block alt"><div class="wrap split">
+    <div>
+      <p class="eyebrow">So much to do, so little time</p>
+      <h2 style="font-size:clamp(28px,3.4vw,38px);margin:8px 0 14px">Booking shipments isn't your core business. It's ours.</h2>
+      <p class="sub" style="max-width:none">Coordinating suppliers in different countries, chasing booking deadlines, getting documents right and avoiding demurrage and detention costs takes time you'd rather spend on the business. We take it off your desk.</p>
+      <ul class="checks">
+        <li>One point of contact for every carrier and every shipment</li>
+        <li>Proactive reminders when a document is still outstanding</li>
+        <li>Your free time with each carrier watched, so demurrage doesn't surprise you</li>
+        <li>Reports on volumes and carrier performance for your next rate negotiation</li>
+      </ul>
+      <a class="btn btn-red" href="#/services">See all services</a>
+    </div>
+    <img src="img/bill-of-lading.jpg" alt="Bill of lading document on a desk with containers behind" width="760" height="569" loading="lazy">
+  </div></section>
+
+  <section class="block"><div class="wrap">
+    <div class="head"><div><p class="eyebrow">How it works</p><h2>From enquiry to sailing</h2></div></div>
+    <div class="steps">
+      <div class="step"><h3>Tell us what's moving</h3><p>Ports, cargo, container type and ready date, through the quote form, by email or by phone.</p></div>
+      <div class="step"><h3>We book it</h3><p>Space confirmed with the right carrier, with the booking checked for compliance before it goes in.</p></div>
+      <div class="step"><h3>We document it</h3><p>Shipping instructions, VGM and B/L validated and submitted, with reminders for anything outstanding.</p></div>
+      <div class="step"><h3>We watch it</h3><p>Haulage, cut-offs and free time followed up, and any disruption handled before it costs you.</p></div>
+    </div>
+    <p class="sample">Sample process, written from the services on nazro.co.za. To be confirmed with Nazro Shipping.</p>
+  </div></section>
+
+  <div class="cta-band"><div class="wrap"><h2>Got a shipment coming up?</h2><a class="btn" href="#/quote">Request a quote</a></div></div>
+</div>
+
+<!-- ============ SERVICES ============ -->
+<div data-view="services">
+  <div class="page-hero" style="background-image:url(img/documents.jpg)"><div class="wrap">
+    <p class="crumbs"><a href="#/">Home</a> / Services</p>
+    <h1>Booking management, start to finish</h1>
+    <p>Ocean freight, air freight, customs brokerage, warehousing and inland delivery, combined with booking and documentation services tailored to how you ship.</p>
+  </div></div>
+  <section class="block"><div class="wrap">
+    <div class="head"><div><p class="eyebrow">Core services</p><h2>What we take off your desk</h2></div></div>
+    <div class="svc-grid">
+      <div class="svc"><p class="n">01</p><h3>Carrier booking</h3><p>Bookings that are compliant, accurate and submitted on time, anywhere in the world.</p></div>
+      <div class="svc"><p class="n">02</p><h3>Verified Gross Mass (VGM) filing</h3><p>We prepare the container weight verification and submit it to your carriers.</p></div>
+      <div class="svc"><p class="n">03</p><h3>Shipping instructions</h3><p>Shipper details validated, then the shipping instructions submitted to the carrier.</p></div>
+      <div class="svc"><p class="n">04</p><h3>Documentation management</h3><p>B/L, sea waybill and DG documents checked for accuracy, with reminders when anything is pending.</p></div>
+      <div class="svc"><p class="n">05</p><h3>Origin haulage coordination</h3><p>We work with your nominated inland haulier so the cargo makes its cut-off.</p></div>
+      <div class="svc"><p class="n">06</p><h3>Exception management</h3><p>Rollovers, delays and document problems handled proactively, before they become costs.</p></div>
+    </div>
+  </div></section>
+  <section class="block dark"><div class="wrap">
+    <div class="head"><div><p class="eyebrow">Add-on services</p><h2>Tailored to how you ship</h2></div><p class="sub">Combine any of these with the core services.</p></div>
+    <div class="addons">
+      <div class="addon"><b>Demurrage &amp; detention visibility</b><span>Your carrier free-time deals watched closely, to keep costs down.</span></div>
+      <div class="addon"><b>Bill of lading printing &amp; dispatch</b><span>B/L printed and couriered to your customer.</span></div>
+      <div class="addon"><b>EDI integration</b><span>Booking data exchanged directly between your systems and ours.</span></div>
+      <div class="addon"><b>Customised reporting</b><span>Volumes, carrier and vendor performance, in the format you need.</span></div>
+      <div class="addon"><b>Milestone visibility</b><span>Extra shipment milestones agreed after a joint review of your needs.</span></div>
+      <div class="addon"><b>US advance filings</b><span>AES/EEI and ISF 10+2 handled for cargo moving to and from the United States.</span></div>
+    </div>
+  </div></section>
+  <section class="block alt"><div class="wrap split">
+    <img src="img/air-freight.jpg" alt="Cargo being loaded into an aircraft at sunset" width="760" height="708" loading="lazy">
+    <div>
+      <p class="eyebrow">Every mode</p>
+      <h2 style="font-size:clamp(28px,3.4vw,38px);margin:8px 0 14px">Sea, air and inland, through one desk</h2>
+      <ul class="checks">
+        <li><b>Ocean freight:</b> FCL and LCL, reefers, tanks, flat racks and open tops</li>
+        <li><b>Air freight:</b> urgent cargo and dangerous goods by air</li>
+        <li><b>Customs brokerage:</b> import and export clearing</li>
+        <li><b>Warehousing and inland delivery:</b> to and from the port</li>
+      </ul>
+      <a class="btn btn-red" href="#/quote">Request a quote</a>
+    </div>
+  </div></section>
+</div>
+
+<!-- ============ SPECIALITIES INDEX ============ -->
+<div data-view="specialities">
+  <div class="page-hero" style="background-image:url(img/general-cargo.jpg)"><div class="wrap">
+    <p class="crumbs"><a href="#/">Home</a> / Specialities</p>
+    <h1>Specialist cargo, handled by specialists</h1>
+    <p>General cargo is our everyday work. These are the shipments where experience really counts.</p>
+  </div></div>
+  <section class="block"><div class="wrap">
+    <div class="spec-grid">
+      <a class="spec" href="#/fresh-fruit"><div class="ph" style="background-image:url(img/reefer.jpg)"><span class="tag">Reefer</span></div><div class="bd"><h3>Fresh fruit</h3><p>Timely delivery and optimal preservation from source to destination.</p><span class="go">Read more →</span></div></a>
+      <a class="spec" href="#/liquid-bulk"><div class="ph" style="background-image:url(img/liquid-bulk.jpg)"><span class="tag">Flexitank · ISO tank</span></div><div class="bd"><h3>Wine &amp; liquid bulk</h3><p>Safe, specialised handling that protects the quality of your liquids.</p><span class="go">Read more →</span></div></a>
+      <a class="spec" href="#/dangerous-goods"><div class="ph dg-ph"><div class="diamond"><span>DG</span></div></div><div class="bd"><h3>Dangerous goods</h3><p>Air and sea, with strict adherence to the safety regulations.</p><span class="go">Read more →</span></div></a>
+      <a class="spec" href="#/project-cargo"><div class="ph" style="background-image:url(img/project-cargo.jpg)"><span class="tag">Out of gauge</span></div><div class="bd"><h3>Project cargo</h3><p>Large-scale, complex, oversized and heavy shipments.</p><span class="go">Read more →</span></div></a>
+    </div>
+    <div class="split" style="margin-top:44px">
+      <div><p class="eyebrow">Everyday work</p><h2 style="font-size:30px;margin:8px 0 10px">General cargo</h2><p class="sub">We handle a wide range of general cargo, with efficient and cost-effective transport for all types of goods, in full and shared containers.</p><p style="margin-top:16px"><a class="btn btn-line" href="#/quote?cat=general">Quote general cargo</a></p></div>
+      <img src="img/general-cargo.jpg" alt="Blue 40-foot shipping container on a terminal" width="760" height="569" loading="lazy">
+    </div>
+  </div></section>
+</div>
+
+<!-- ============ SPECIALITY DETAIL PAGES ============ -->
+<div data-view="fresh-fruit">
+  <div class="page-hero" style="background-image:url(img/reefer.jpg)"><div class="wrap">
+    <p class="crumbs"><a href="#/">Home</a> / <a href="#/specialities">Specialities</a> / Fresh fruit</p>
+    <h1>Fresh fruit exports, kept cold and on time</h1>
+    <p>Perishable cargo has no slack. We book the reefer space, get the settings and paperwork right first time, and follow the box through to sailing.</p>
+  </div></div>
+  <section class="block"><div class="wrap detail">
+    <div>
+      <h2>What we handle for fruit exporters</h2>
+      <p>With a focus on freshness and quality, we offer specialised logistics for fresh fruit, making sure it's delivered on time and preserved from source to destination.</p>
+      <h3>Reefer bookings</h3>
+      <p>20ft and 40ft reefer space booked with the right carrier for the season, with set temperature, ventilation and humidity on the booking, and cold-treatment requirements flagged for the markets that need them.</p>
+      <h3>Documents we check before sailing</h3>
+      <ul class="doclist">
+        <li><b>PPECB export certificate</b><span>· inspection and certification for perishable exports</span></li>
+        <li><b>Phytosanitary certificate</b><span>· required by the importing country</span></li>
+        <li><b>Certificate of origin</b><span>· for preferential duty in the destination market</span></li>
+        <li><b>Shipping instructions and VGM</b><span>· submitted before the carrier's cut-off</span></li>
+        <li><b>Bill of lading or sea waybill</b><span>· validated against your sales contract</span></li>
+      </ul>
+      <p class="sample">Sample content: please confirm which documents Nazro prepares itself and which it coordinates with the exporter.</p>
+    </div>
+    <aside class="facts">
+      <h3>At a glance</h3>
+      <dl><dt>Equipment</dt><dd>20ft and 40ft reefers</dd><dt>Modes</dt><dd>Sea, air for urgent fruit</dd><dt>Watched for you</dt><dd>Cut-offs, plug-in, free time</dd></dl>
+      <a class="btn btn-red" href="#/quote?cat=reefer">Quote a reefer shipment</a>
+    </aside>
+  </div></section>
+</div>
+
+<div data-view="liquid-bulk">
+  <div class="page-hero" style="background-image:url(img/liquid-bulk.jpg)"><div class="wrap">
+    <p class="crumbs"><a href="#/">Home</a> / <a href="#/specialities">Specialities</a> / Wine &amp; liquid bulk</p>
+    <h1>Wine and liquid bulk, delivered as it left</h1>
+    <p>Our experience in wine and liquid bulk logistics means safe, specialised handling that keeps the quality and integrity of your liquids intact across the supply chain.</p>
+  </div></div>
+  <section class="block"><div class="wrap detail">
+    <div>
+      <h2>Flexitank or ISO tank?</h2>
+      <p>Most bulk wine moves in a flexitank: a single-use bag inside a standard 20ft container, holding up to about 24,000 litres. ISO tank containers are reusable steel tanks, better suited to repeat flows and to liquids that need heating or that are classed as hazardous.</p>
+      <h3>What we arrange</h3>
+      <ul class="doclist">
+        <li><b>Equipment</b><span>· flexitank supply and fitting, or ISO tank booking</span></li>
+        <li><b>Carrier approval</b><span>· not every line accepts flexitanks on every route</span></li>
+        <li><b>Documents</b><span>· export certificates, certificate of origin, B/L</span></li>
+        <li><b>Insurance</b><span>· cover for the full value of the cargo</span></li>
+      </ul>
+      <p class="sample">Sample content: please confirm the equipment and certificates Nazro typically arranges for wine exporters.</p>
+    </div>
+    <aside class="facts">
+      <h3>At a glance</h3>
+      <dl><dt>Equipment</dt><dd>Flexitanks, ISO tanks</dd><dt>Cargo</dt><dd>Bulk wine, other liquids</dd><dt>Mode</dt><dd>Sea</dd></dl>
+      <a class="btn btn-red" href="#/quote?cat=liquid">Quote a liquid bulk shipment</a>
+    </aside>
+  </div></section>
+</div>
+
+<div data-view="dangerous-goods">
+  <div class="page-hero" style="background-image:url(img/documents.jpg)"><div class="wrap">
+    <p class="crumbs"><a href="#/">Home</a> / <a href="#/specialities">Specialities</a> / Dangerous goods</p>
+    <h1>Dangerous goods by air and sea, declared properly</h1>
+    <p>We're equipped to move dangerous goods by both air and sea, with strict adherence to safety regulations and procedures so every shipment is secure and compliant.</p>
+  </div></div>
+  <section class="block"><div class="wrap detail">
+    <div>
+      <h2>What we need from you</h2>
+      <p>A dangerous goods booking is only accepted if the details are complete. Send us these with your enquiry and we can check carrier acceptance straight away.</p>
+      <ul class="doclist">
+        <li><b>UN number and proper shipping name</b><span>· from the safety data sheet</span></li>
+        <li><b>Class and packing group</b><span>· for example Class 3, PG II</span></li>
+        <li><b>Safety data sheet (SDS)</b><span>· current version</span></li>
+        <li><b>Packaging and quantities</b><span>· inner and outer packaging, net quantity per package</span></li>
+      </ul>
+      <h3>The rules we work to</h3>
+      <p><b>Sea:</b> the IMDG Code, with the DG declaration and container packing certificate. <b>Air:</b> the IATA Dangerous Goods Regulations, with the shipper's declaration for dangerous goods.</p>
+      <p class="sample">Sample content: please confirm Nazro's DG certifications so they can be listed on the Compliance page.</p>
+    </div>
+    <aside class="facts">
+      <h3>At a glance</h3>
+      <dl><dt>Modes</dt><dd>Sea and air</dd><dt>Sea rules</dt><dd>IMDG Code</dd><dt>Air rules</dt><dd>IATA DGR</dd></dl>
+      <a class="btn btn-red" href="#/quote?cat=dg">Quote a DG shipment</a>
+    </aside>
+  </div></section>
+</div>
+
+<div data-view="project-cargo">
+  <div class="page-hero" style="background-image:url(img/project-cargo.jpg)"><div class="wrap">
+    <p class="crumbs"><a href="#/">Home</a> / <a href="#/specialities">Specialities</a> / Project cargo</p>
+    <h1>Project cargo, planned piece by piece</h1>
+    <p>Our project cargo service caters for the unique needs of large-scale and complex shipments, with customised solutions for oversized and heavy items.</p>
+  </div></div>
+  <section class="block"><div class="wrap detail">
+    <div>
+      <h2>Cargo that doesn't fit in a box</h2>
+      <p>Machinery, vehicles, aircraft and structures that are too long, wide, tall or heavy for a standard container go on flat racks or open tops, or as breakbulk on the ship's deck.</p>
+      <h3>What we plan</h3>
+      <ul class="doclist">
+        <li><b>Dimensions and weights</b><span>· every piece, with lifting points</span></li>
+        <li><b>Equipment</b><span>· flat rack, open top or breakbulk</span></li>
+        <li><b>Lashing and securing</b><span>· to the carrier's requirements</span></li>
+        <li><b>Inland moves</b><span>· abnormal-load transport to and from the port</span></li>
+      </ul>
+      <p class="sample">Sample content: a short case study of a recent project shipment would make this page much stronger.</p>
+    </div>
+    <aside class="facts">
+      <h3>At a glance</h3>
+      <dl><dt>Equipment</dt><dd>Flat racks, open tops</dd><dt>Also</dt><dd>Breakbulk, RORO</dd><dt>Send us</dt><dd>Drawings and weights</dd></dl>
+      <a class="btn btn-red" href="#/quote?cat=project">Quote project cargo</a>
+    </aside>
+  </div></section>
+</div>
+
+<!-- ============ TOOLS ============ -->
+<div data-view="tools">
+  <div class="page-hero" style="background-image:url(img/bill-of-lading.jpg)"><div class="wrap">
+    <p class="crumbs"><a href="#/">Home</a> / Exporter tools</p>
+    <h1>Tools for exporters</h1>
+    <p>A document checklist, a quick Incoterms guide, and tracking links for the main carriers. Free to use, no sign-up.</p>
+  </div></div>
+  <section class="block"><div class="wrap tools">
+    <div class="panel">
+      <h3>Export document checklist</h3>
+      <p>Choose your cargo type and tick off documents as you get them.</p>
+      <div class="seg" role="group" aria-label="Cargo type">
+        <button aria-pressed="true" data-list="general">General cargo</button>
+        <button aria-pressed="false" data-list="fruit">Fresh fruit</button>
+        <button aria-pressed="false" data-list="liquid">Liquid bulk</button>
+        <button aria-pressed="false" data-list="dg">Dangerous goods</button>
+      </div>
+      <div class="progress" aria-hidden="true"><i id="prog"></i></div>
+      <p id="progtxt" style="font-size:13.5px;color:var(--muted);margin:-8px 0 10px"></p>
+      <ul class="check" id="checklist"></ul>
+      <p class="sample">Sample checklist, to be reviewed by Nazro Shipping.</p>
+    </div>
+    <div>
+      <div class="panel inco">
+        <h3>Incoterms 2020 at a glance</h3>
+        <p>Who pays for the main freight, and where risk passes from seller to buyer.</p>
+        <table>
+          <tr><th>Term</th><th>Seller pays main freight?</th><th>Risk passes</th></tr>
+          <tr><td>EXW</td><td>No</td><td>At the seller's premises</td></tr>
+          <tr><td>FCA</td><td>No</td><td>When handed to the buyer's carrier</td></tr>
+          <tr class="sea"><td>FOB</td><td>No</td><td>On board the vessel at origin</td></tr>
+          <tr class="sea"><td>CFR</td><td>Yes</td><td>On board the vessel at origin</td></tr>
+          <tr class="sea"><td>CIF</td><td>Yes, plus insurance</td><td>On board the vessel at origin</td></tr>
+          <tr><td>CPT</td><td>Yes</td><td>When handed to the first carrier</td></tr>
+          <tr><td>CIP</td><td>Yes, plus insurance</td><td>When handed to the first carrier</td></tr>
+          <tr><td>DAP</td><td>Yes</td><td>At destination, ready to unload</td></tr>
+          <tr><td>DPU</td><td>Yes</td><td>At destination, unloaded</td></tr>
+          <tr><td>DDP</td><td>Yes, plus import duties</td><td>At destination, cleared</td></tr>
+        </table>
+      </div>
+      <div class="panel" style="margin-top:20px">
+        <h3>Track a container</h3>
+        <p>Have your container or B/L number ready. Each link opens the carrier's own tracking page.</p>
+        <div class="track">
+          <a href="https://www.maersk.com/tracking/" target="_blank" rel="noopener">Maersk</a>
+          <a href="https://www.msc.com/en/track-a-shipment" target="_blank" rel="noopener">MSC</a>
+          <a href="https://www.cma-cgm.com/ebusiness/tracking" target="_blank" rel="noopener">CMA CGM</a>
+          <a href="https://www.hapag-lloyd.com/en/online-business/track/track-by-container-solution.html" target="_blank" rel="noopener">Hapag-Lloyd</a>
+          <a href="https://ecomm.one-line.com/one-ecom/manage-shipment/cargo-tracking" target="_blank" rel="noopener">ONE</a>
+          <a href="https://www.evergreen-line.com/" target="_blank" rel="noopener">Evergreen</a>
+        </div>
+      </div>
+    </div>
+  </div></section>
+</div>
+
+<!-- ============ COMPLIANCE ============ -->
+<div data-view="compliance">
+  <div class="page-hero" style="background-image:url(img/team-port.jpg)"><div class="wrap">
+    <p class="crumbs"><a href="#/">Home</a> / Compliance</p>
+    <h1>Registered, certified and accountable</h1>
+    <p>Everything your procurement team needs to approve us as a supplier, in one place.</p>
+  </div></div>
+  <section class="block"><div class="wrap">
+    <div class="comp">
+      <div class="c"><p class="k">Company</p><b>Nazro Shipping (Pty) Ltd</b><p class="ph-val">Registration no. 20XX/XXXXXX/07 (to be added)</p></div>
+      <div class="c"><p class="k">SARS</p><b>Customs registration</b><p class="ph-val">Customs client number (to be added)</p></div>
+      <div class="c"><p class="k">B-BBEE</p><b>Level to be confirmed</b><p class="ph-val">Certificate or sworn affidavit (to be added)</p><a class="dl" href="#/compliance" onclick="return false">Download certificate (PDF)</a></div>
+      <div class="c"><p class="k">Industry body</p><b>SAAFF membership</b><p class="ph-val">To be confirmed</p></div>
+      <div class="c"><p class="k">Dangerous goods</p><b>IATA DGR and IMDG training</b><p class="ph-val">Certified staff (to be confirmed)</p></div>
+      <div class="c"><p class="k">Insurance</p><b>Cargo and liability cover</b><p class="ph-val">Insurer and cover (to be added)</p></div>
+    </div>
+    <div class="split" style="margin-top:40px">
+      <div>
+        <p class="eyebrow">Our people</p>
+        <h2 style="font-size:30px;margin:8px 0 10px">Trained on the job, every day</h2>
+        <p class="sub">We give our team on-the-job training so you get professional, knowledgeable service on every booking. Senior management is easy to reach.</p>
+        <p class="sub" style="margin-top:12px"><b>Privacy:</b> we process your personal information in line with POPIA. <a href="#/compliance" onclick="return false" style="color:var(--red)">Read our privacy notice</a> (sample link).</p>
+      </div>
+      <img src="img/team-port.jpg" alt="Team in safety vests at a container terminal" width="1200" height="800" loading="lazy" style="filter:grayscale(.2)">
+    </div>
+    <p class="sample">Every value marked "to be added" or "to be confirmed" is a placeholder. On the live site, these hold Nazro's real registration details and certificates.</p>
+  </div></section>
+</div>
+
+<!-- ============ QUOTE ============ -->
+<div data-view="quote">
+  <section class="block"><div class="wrap qgrid">
+    <div class="qside">
+      <p class="eyebrow">Request a quote</p>
+      <h1 style="font-size:clamp(30px,3.8vw,42px);margin:8px 0 14px">Tell us what's moving</h1>
+      <p class="sub">The more you tell us now, the faster we can price it. Fields you don't know yet can be left blank.</p>
+      <ul>
+        <li><b>1</b><span>Every request gets a reference number straight away.</span></li>
+        <li><b>2</b><span>It arrives at info@nazro.co.za as one complete email.</span></li>
+        <li><b>3</b><span>Reefer and DG details only appear when you need them.</span></li>
+      </ul>
+      <p style="margin-top:22px"><a class="btn btn-line" href="https://wa.me/27728398853?text=Hi%20Nazro%2C%20I%27d%20like%20a%20quote%20for%20a%20shipment." target="_blank" rel="noopener">Or WhatsApp us</a></p>
+    </div>
+    <form id="qf" novalidate>
+      <fieldset class="fs"><legend><span>1</span>The shipment</legend>
+        <div class="row">
+          <div class="f full"><label class="l">Direction</label><div class="chips">
+            <label><input type="radio" name="dir" value="Export" checked>Export</label>
+            <label><input type="radio" name="dir" value="Import">Import</label>
+            <label><input type="radio" name="dir" value="Cross-trade">Cross-trade</label></div></div>
+        </div>
+        <div class="row">
+          <div class="f"><label class="l" for="mode">Mode</label><select id="mode" name="mode"><option>Sea: full container (FCL)</option><option>Sea: shared container (LCL)</option><option>Sea: breakbulk / RORO</option><option>Air freight</option></select></div>
+          <div class="f"><label class="l" for="cat">Cargo</label><select id="cat" name="cat">
+            <option value="general">General cargo</option><option value="reefer">Fresh fruit / reefer</option><option value="liquid">Wine / liquid bulk</option><option value="dg">Dangerous goods</option><option value="project">Project cargo</option></select></div>
+        </div>
+        <div class="row">
+          <div class="f"><label class="l" for="from">Origin <small>(port or city)</small></label><input id="from" name="from" placeholder="e.g. Durban" required><span class="err">Where is it coming from?</span></div>
+          <div class="f"><label class="l" for="to">Destination <small>(port or city)</small></label><input id="to" name="to" placeholder="e.g. Rotterdam" required><span class="err">Where is it going?</span></div>
+        </div>
+        <div class="row three">
+          <div class="f"><label class="l" for="inco">Incoterm</label><select id="inco" name="inco"><option>Not sure</option><option>EXW</option><option>FCA</option><option>FOB</option><option>CFR</option><option>CIF</option><option>CPT</option><option>CIP</option><option>DAP</option><option>DPU</option><option>DDP</option></select></div>
+          <div class="f"><label class="l" for="eq">Equipment</label><select id="eq" name="eq"></select></div>
+          <div class="f"><label class="l" for="qty">Quantity</label><input id="qty" name="qty" type="number" min="1" value="1"></div>
+        </div>
+        <div class="cond cold" id="c-reefer"><div class="row">
+          <div class="f"><label class="l" for="temp">Set temperature (°C)</label><input id="temp" name="temp" placeholder="e.g. -0.5"></div>
+          <div class="f"><label class="l" for="vent">Ventilation / humidity</label><input id="vent" name="vent" placeholder="e.g. 15 CBM/h, 90%"></div>
+        </div></div>
+        <div class="cond" id="c-dg"><div class="row">
+          <div class="f"><label class="l" for="un">UN number</label><input id="un" name="un" placeholder="e.g. UN1263"><span class="err">Please add the UN number.</span></div>
+          <div class="f"><label class="l" for="cls">Class / packing group</label><input id="cls" name="cls" placeholder="e.g. Class 3, PG II"></div>
+        </div></div>
+        <div class="row">
+          <div class="f"><label class="l" for="commodity">Commodity</label><input id="commodity" name="commodity" placeholder="e.g. Citrus, bulk red wine, mining machinery"></div>
+          <div class="f"><label class="l" for="ready">Cargo ready date</label><input id="ready" name="ready" type="date"></div>
+        </div>
+        <div class="row">
+          <div class="f"><label class="l" for="wt">Total weight (kg)</label><input id="wt" name="wt" inputmode="decimal" placeholder="e.g. 21 000"></div>
+          <div class="f"><label class="l" for="vol">Volume (m³) or dimensions</label><input id="vol" name="vol" placeholder="e.g. 58 m³, or 6.2 × 2.4 × 3.1 m"></div>
+        </div>
+      </fieldset>
+      <fieldset class="fs"><legend><span>2</span>Your details</legend>
+        <div class="row">
+          <div class="f"><label class="l" for="nm">Name</label><input id="nm" name="nm" autocomplete="name" required><span class="err">Please add your name.</span></div>
+          <div class="f"><label class="l" for="co">Company</label><input id="co" name="co" autocomplete="organization"></div>
+        </div>
+        <div class="row">
+          <div class="f"><label class="l" for="em">Email</label><input id="em" name="em" type="email" autocomplete="email" required><span class="err">Please add a valid email.</span></div>
+          <div class="f"><label class="l" for="tel">Phone</label><input id="tel" name="tel" type="tel" autocomplete="tel"></div>
+        </div>
+        <div class="row"><div class="f full"><label class="l" for="notes">Anything else?</label><textarea id="notes" name="notes" placeholder="Special handling, preferred carrier, deadlines..."></textarea></div></div>
+      </fieldset>
+      <button class="btn btn-red" type="submit" style="width:100%">Send quote request</button>
+      <div class="done" id="done" role="status" aria-live="polite">
+        <h3>Request <span id="ref"></span> ready</h3>
+        <p>Demo only: nothing was sent. On the live site, this email goes to info@nazro.co.za and the client gets a copy.</p>
+        <pre id="preview"></pre>
+      </div>
+    </form>
+  </div></section>
+</div>
+
+<!-- ============ CONTACT ============ -->
+<div data-view="contact">
+  <section class="block"><div class="wrap">
+    <div class="head"><div><p class="eyebrow">Contact</p><h1 style="font-size:clamp(30px,3.8vw,42px);margin-top:8px">For your next shipment, talk to us</h1></div><p class="sub">One point of contact, and senior management a phone call away.</p></div>
+    <div class="cgrid">
+      <div class="ccard"><p class="k">Call or WhatsApp</p><b><a href="tel:+27728398853">072 839 8853</a></b><p><a href="https://wa.me/27728398853" target="_blank" rel="noopener" style="color:#1d7f4e;font-weight:600">Open WhatsApp</a> · Mon to Fri, 08:00 to 17:00 (sample)</p></div>
+      <div class="ccard"><p class="k">Email</p><b style="font-size:19px"><a href="mailto:info@nazro.co.za">info@nazro.co.za</a></b><p>Direct: <a href="mailto:mh@nazro.co.za" style="text-decoration:underline">mh@nazro.co.za</a></p></div>
+      <div class="ccard"><p class="k">Postal address</p><b style="font-size:19px">Postnet Suite 38</b><p>Highlands North, Johannesburg, 2037</p></div>
+    </div>
+    <div style="margin-top:26px;display:flex;gap:12px;flex-wrap:wrap"><a class="btn btn-red" href="#/quote">Request a quote</a><a class="btn btn-line" href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn (sample link)</a></div>
+  </div></section>
+</div>
+
+</main>
+
+<footer><div class="wrap">
+  <div class="fgrid">
+    <div><img src="img/logo.png" alt="Nazro Shipping (Pty) Ltd" style="height:34px;width:auto;margin-bottom:12px" loading="lazy"><p>Carrier booking, documentation and exception management for exporters and importers. Making reliability constant.</p></div>
+    <div><h4>Specialities</h4><ul><li><a href="#/fresh-fruit">Fresh fruit</a></li><li><a href="#/liquid-bulk">Wine &amp; liquid bulk</a></li><li><a href="#/dangerous-goods">Dangerous goods</a></li><li><a href="#/project-cargo">Project cargo</a></li></ul></div>
+    <div><h4>Company</h4><ul><li><a href="#/services">Services</a></li><li><a href="#/tools">Exporter tools</a></li><li><a href="#/compliance">Compliance</a></li><li><a href="#/quote">Request a quote</a></li></ul></div>
+    <div><h4>Contact</h4><ul><li><a href="tel:+27728398853">072 839 8853</a></li><li><a href="mailto:info@nazro.co.za">info@nazro.co.za</a></li><li>Postnet Suite 38, Highlands North, 2037</li></ul></div>
+  </div>
+  <div class="fbase"><span>© <span id="yr"></span> Nazro Shipping (Pty) Ltd</span><span>Concept by Deshlan Pillay</span></div>
+</div></footer>
+
+<div class="callbar"><a href="tel:+27728398853">Call</a><a href="https://wa.me/27728398853" target="_blank" rel="noopener">WhatsApp</a><a href="#/quote">Quote</a></div>
+
+<script>
+document.getElementById('yr').textContent = new Date().getFullYear();
+
+/* ---------- tiny hash router: each #/page shows one view ---------- */
+const views = [...document.querySelectorAll('[data-view]')];
+const navLinks = [...document.querySelectorAll('nav.main a')];
+const SPECS = ['fresh-fruit', 'liquid-bulk', 'dangerous-goods', 'project-cargo'];
+const TITLES = { home: 'Carrier booking & documentation', services: 'Services', specialities: 'Specialities', 'fresh-fruit': 'Fresh fruit exports', 'liquid-bulk': 'Wine & liquid bulk', 'dangerous-goods': 'Dangerous goods', 'project-cargo': 'Project cargo', tools: 'Exporter tools', compliance: 'Compliance', quote: 'Request a quote', contact: 'Contact' };
+function route() {
+  const [path, query] = (location.hash.replace(/^#\/?/, '') || '').split('?');
+  const name = views.some(v => v.dataset.view === path) ? path : 'home';
+  views.forEach(v => v.classList.toggle('on', v.dataset.view === name));
+  const section = SPECS.includes(name) ? 'specialities' : name;
+  navLinks.forEach(a => a.toggleAttribute('aria-current', a.getAttribute('href') === '#/' + (section === 'home' ? '' : section)));
+  navLinks.forEach(a => { if (a.hasAttribute('aria-current')) a.setAttribute('aria-current', 'page'); });
+  document.title = 'Nazro Shipping · ' + TITLES[name] + ' (concept)';
+  if (name === 'quote' && query) { const c = new URLSearchParams(query).get('cat'); if (c) { cat.value = c; syncCargo(); } }
+  closeMenu(); window.scrollTo(0, 0);
+}
+addEventListener('hashchange', route);
+
+/* ---------- mobile menu ---------- */
+const menuBtn = document.querySelector('.menu-btn'), nav = document.getElementById('nav');
+function closeMenu() { nav.classList.remove('open'); menuBtn.setAttribute('aria-expanded', 'false'); }
+menuBtn.addEventListener('click', () => { const o = nav.classList.toggle('open'); menuBtn.setAttribute('aria-expanded', o); });
+
+/* ---------- export document checklist ---------- */
+const LISTS = {
+  general: [['Commercial invoice', 'Value, Incoterm and parties'], ['Packing list', 'Packages, weights and dimensions'], ['Customs export declaration', 'Lodged with SARS'], ['Shipping instructions', 'To the carrier before cut-off'], ['VGM', 'Verified gross mass of each container'], ['Bill of lading or sea waybill', 'Issued by the carrier']],
+  fruit: [['Commercial invoice', 'Value, Incoterm and parties'], ['Packing list', 'Cartons, pallets and weights'], ['PPECB export certificate', 'Inspection of perishable products'], ['Phytosanitary certificate', 'For the importing country'], ['Certificate of origin', 'For preferential duty'], ['Customs export declaration', 'Lodged with SARS'], ['Reefer settings on the booking', 'Temperature, ventilation, humidity'], ['Bill of lading', 'Issued by the carrier']],
+  liquid: [['Commercial invoice', 'Value, Incoterm and parties'], ['Packing list', 'Litres and weight per tank'], ['Export certificates for the product', 'For example, wine export approval'], ['Certificate of origin', 'For preferential duty'], ['Flexitank or ISO tank confirmation', 'Carrier approval for the route'], ['Customs export declaration', 'Lodged with SARS'], ['Bill of lading', 'Issued by the carrier']],
+  dg: [['Commercial invoice', 'Value, Incoterm and parties'], ['Safety data sheet (SDS)', 'Current version'], ['Dangerous goods declaration', 'IMDG for sea, IATA DGR for air'], ['Container packing certificate', 'For sea freight'], ['UN-approved packaging and labels', 'Matching the class and packing group'], ['Customs export declaration', 'Lodged with SARS'], ['Bill of lading or air waybill', 'Issued by the carrier']],
+};
+const listEl = document.getElementById('checklist'), prog = document.getElementById('prog'), progtxt = document.getElementById('progtxt');
+function showList(key) {
+  listEl.innerHTML = LISTS[key].map(([t, s], i) => `<li><label><input type="checkbox" data-i="${i}"><span>${t}<small>${s}</small></span></label></li>`).join('');
+  updateProg();
+}
+function updateProg() {
+  const all = listEl.querySelectorAll('input'), done = listEl.querySelectorAll('input:checked');
+  prog.style.width = (all.length ? done.length / all.length * 100 : 0) + '%';
+  progtxt.textContent = `${done.length} of ${all.length} documents ready`;
+}
+listEl.addEventListener('change', updateProg);
+document.querySelectorAll('[data-list]').forEach(b => b.addEventListener('click', () => {
+  document.querySelectorAll('[data-list]').forEach(x => x.setAttribute('aria-pressed', x === b));
+  showList(b.dataset.list);
+}));
+showList('general');
+
+/* ---------- quote form ---------- */
+const form = document.getElementById('qf'), cat = document.getElementById('cat'), eq = document.getElementById('eq'), mode = document.getElementById('mode');
+const EQUIP = {
+  general: ['20ft dry', '40ft dry', '40ft high cube', 'Not sure'],
+  reefer: ['20ft reefer', '40ft reefer (high cube)', 'Not sure'],
+  liquid: ['Flexitank (20ft)', 'ISO tank', 'Not sure'],
+  dg: ['20ft dry', '40ft dry', '40ft high cube', 'ISO tank', 'Not sure'],
+  project: ['Flat rack', 'Open top', 'Breakbulk', 'RORO', 'Not sure'],
+};
+function syncCargo() {
+  const c = cat.value;
+  const list = mode.value.startsWith('Air') ? ['Loose cargo', 'ULD / pallet', 'Not sure'] : mode.value.includes('LCL') ? ['Pallets / loose cargo'] : EQUIP[c];
+  eq.innerHTML = list.map(o => `<option>${o}</option>`).join('');
+  document.getElementById('c-reefer').classList.toggle('on', c === 'reefer');
+  document.getElementById('c-dg').classList.toggle('on', c === 'dg');
+}
+cat.addEventListener('change', syncCargo); mode.addEventListener('change', syncCargo); syncCargo();
+
+form.addEventListener('submit', e => {
+  e.preventDefault();
+  const need = [...form.querySelectorAll('[required]')];
+  if (cat.value === 'dg') need.push(document.getElementById('un'));
+  let first = null;
+  form.querySelectorAll('.f.bad').forEach(f => f.classList.remove('bad'));
+  need.forEach(i => {
+    const v = i.value.trim();
+    const bad = !v || (i.type === 'email' && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v));
+    if (bad) { i.closest('.f').classList.add('bad'); i.setAttribute('aria-invalid', 'true'); first = first || i; } else i.removeAttribute('aria-invalid');
+  });
+  const done = document.getElementById('done');
+  if (first) { done.classList.remove('show'); first.focus(); return; }
+  const d = Object.fromEntries(new FormData(form));
+  const n = new Date(), p = x => String(x).padStart(2, '0');
+  const ref = `NZ-${String(n.getFullYear()).slice(2)}${p(n.getMonth() + 1)}${p(n.getDate())}-${Math.floor(1000 + Math.random() * 9000)}`;
+  const catLabel = cat.options[cat.selectedIndex].text;
+  const lines = [
+    `To: info@nazro.co.za`,
+    `Subject: Quote ${ref}: ${d.dir}, ${catLabel}, ${d.from} to ${d.to}`, '',
+    `Direction:   ${d.dir}`, `Mode:        ${d.mode}`, `Cargo:       ${catLabel}${d.commodity ? ' (' + d.commodity + ')' : ''}`,
+    `Route:       ${d.from} -> ${d.to}`, `Incoterm:    ${d.inco}`, `Equipment:   ${d.qty || 1} x ${d.eq}`,
+  ];
+  if (cat.value === 'reefer') lines.push(`Reefer:      ${d.temp || '?'} °C, ${d.vent || 'vent/humidity not given'}`);
+  if (cat.value === 'dg') lines.push(`DG:          ${d.un}${d.cls ? ', ' + d.cls : ''}`);
+  lines.push(`Weight:      ${d.wt || '(not given)'} kg`, `Volume:      ${d.vol || '(not given)'}`, `Ready:       ${d.ready || '(not given)'}`, '',
+    `From:        ${d.nm}${d.co ? ', ' + d.co : ''}`, `Email:       ${d.em}`, `Phone:       ${d.tel || '(not given)'}`);
+  if (d.notes) lines.push('', `Notes:       ${d.notes}`);
+  document.getElementById('ref').textContent = ref;
+  document.getElementById('preview').textContent = lines.join('\n');
+  done.classList.add('show');
+  done.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+});
+
+route();
+</script>
+</body>
+</html>
