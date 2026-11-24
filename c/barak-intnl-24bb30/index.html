@@ -1,0 +1,460 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Barak International · South African beverage exporter, Umhlanga (concept)</title>
+<meta name="description" content="Concept website for Barak International: South African beverages exported in full container loads from the Port of Durban to importers and distributors.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --sea:#0e4a58;--sea2:#13606f;--deep:#082f38;--tide:#1c8b9b;
+  --sand:#d4ad6e;--sand-soft:#f6efe2;--foam:#eef5f6;
+  --ink:#14232a;--muted:#5a6b73;--card:#fff;--bg:#fbfaf7;
+  --line:rgba(14,74,88,.12);--line2:rgba(14,74,88,.26);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+body{font:16px/1.62 'Inter',system-ui,-apple-system,'Segoe UI',sans-serif;color:var(--ink);background:var(--bg);-webkit-font-smoothing:antialiased}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--sand);outline-offset:2px}
+.wrap{max-width:1140px;margin:0 auto;padding:0 20px}
+h1,h2,h3,.disp{font-family:'Sora',system-ui,sans-serif;line-height:1.12;letter-spacing:-.02em}
+.eyebrow{font:600 12px 'Inter',sans-serif;letter-spacing:.14em;text-transform:uppercase;color:var(--tide)}
+.dark .eyebrow,.hero .eyebrow{color:var(--sand)}
+
+.concept{background:#05161b;color:#fff;font-size:13px;text-align:center;padding:8px 16px}
+.concept b{color:#ffd88a}
+
+header{position:sticky;top:0;z-index:40;background:rgba(255,255,255,.96);backdrop-filter:saturate(1.4) blur(8px);border-bottom:1px solid var(--line)}
+.bar{display:flex;align-items:center;justify-content:space-between;height:70px;gap:18px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--sea)}
+.logo svg{width:34px;height:34px}
+.logo b{font:700 19px 'Sora',sans-serif;letter-spacing:.14em;display:block;line-height:1}
+.logo i{font:600 9px 'Inter',sans-serif;letter-spacing:.32em;text-transform:uppercase;font-style:normal;color:var(--tide)}
+nav.main{display:flex;gap:2px}
+nav.main a{text-decoration:none;font-size:15px;font-weight:500;padding:8px 12px;border-radius:6px;color:#33454d}
+nav.main a:hover{background:var(--foam);color:var(--sea)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font:600 15px 'Inter',sans-serif;padding:13px 22px;border-radius:8px;text-decoration:none;border:0;cursor:pointer;transition:transform .15s,background .15s}
+.btn:hover{transform:translateY(-1px)}
+.btn-sea{background:var(--sea);color:#fff}.btn-sea:hover{background:var(--deep)}
+.btn-sand{background:var(--sand);color:#2b1d05}
+.btn-ghost{background:transparent;color:#fff;box-shadow:inset 0 0 0 1.5px rgba(255,255,255,.5)}
+.btn-line{background:#fff;color:var(--sea);box-shadow:inset 0 0 0 1.5px var(--line2)}
+.bar .btn{padding:10px 18px}
+.menu-btn{display:none;background:none;border:0;color:var(--sea);padding:8px;cursor:pointer}
+.menu-btn svg{width:26px;height:26px}
+
+/* hero */
+.hero{background:linear-gradient(160deg,var(--sea) 0%,var(--deep) 70%);color:#fff;position:relative;overflow:hidden}
+.waves{position:absolute;left:0;right:0;bottom:0;height:120px;opacity:.18}
+.hero .wrap{position:relative;display:grid;grid-template-columns:1.15fr .85fr;gap:48px;padding-top:76px;padding-bottom:96px;align-items:center}
+.hero h1{font-size:clamp(38px,5.4vw,62px);margin:14px 0 18px}
+.hero h1 span{color:var(--sand)}
+.hero p.lead{font-size:18px;color:#cfe2e6;max-width:50ch;margin-bottom:28px}
+.cta{display:flex;gap:12px;flex-wrap:wrap}
+.route{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-radius:14px;padding:24px}
+.route h2{font-size:18px;margin-bottom:16px;color:#fff}
+.lane{display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:12px}
+.port{text-align:center}
+.port b{display:block;font:700 18px 'Sora',sans-serif}
+.port small{color:#9fc3ca;font-size:12.5px}
+.path{height:2px;background:repeating-linear-gradient(90deg,var(--sand) 0 8px,transparent 8px 14px);position:relative}
+.path::after{content:"";position:absolute;right:-2px;top:-5px;border:6px solid transparent;border-left:9px solid var(--sand)}
+.ship{position:absolute;left:38%;top:-13px;font-size:20px}
+.facts{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:20px}
+.facts div{background:rgba(255,255,255,.06);border-radius:10px;padding:12px 14px}
+.facts b{display:block;font:600 16px 'Sora',sans-serif;color:#fff}
+.facts span{font-size:13px;color:#a9cad0}
+
+.trust{background:#fff;border-bottom:1px solid var(--line)}
+.trust .wrap{display:grid;grid-template-columns:repeat(4,1fr)}
+.trust div{padding:20px 16px;border-left:1px solid var(--line);font-size:14px;color:var(--muted)}
+.trust div:first-child{border-left:0;padding-left:0}
+.trust b{display:block;font:600 16px 'Sora',sans-serif;color:var(--sea)}
+
+section.block{padding:84px 0}
+section.white{background:#fff}
+section.foam{background:var(--foam)}
+section.dark{background:var(--deep);color:#fff}
+.head{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;margin-bottom:34px;flex-wrap:wrap}
+.head h2{font-size:clamp(28px,3.6vw,42px);margin-top:8px;color:var(--sea)}
+.dark .head h2{color:#fff}
+.sub{color:var(--muted);max-width:56ch}
+.dark .sub{color:#a9cad0}
+
+/* products */
+.prod-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.prod{background:#fff;border:1px solid var(--line);border-radius:14px;overflow:hidden;display:flex;flex-direction:column}
+.prod .art{height:170px;display:grid;place-items:end center;padding-top:16px;position:relative}
+.prod .art svg{height:140px;width:auto}
+.prod .badge{position:absolute;left:14px;top:14px;background:rgba(255,255,255,.9);color:var(--sea);font-size:12px;font-weight:600;padding:3px 10px;border-radius:99px}
+.prod .bd{padding:20px;display:flex;flex-direction:column;gap:8px;flex:1}
+.prod h3{font-size:20px;color:var(--sea)}
+.prod p{font-size:14.5px;color:var(--muted)}
+.spec{width:100%;border-collapse:collapse;font-size:13.5px;margin-top:6px}
+.spec td{padding:6px 0;border-top:1px solid var(--line)}
+.spec td:last-child{text-align:right;font-weight:600}
+.prod .add{margin-top:auto;padding-top:10px}
+.prod .add label{display:flex;align-items:center;gap:8px;font-size:14px;font-weight:600;color:var(--sea);cursor:pointer}
+.prod .add input{accent-color:var(--sea);width:17px;height:17px}
+.sample{font-size:13px;color:#7a6025;background:#fff8e7;border:1px dashed #d8bf86;border-radius:8px;padding:9px 13px;margin-top:20px}
+.dark .sample{background:rgba(255,248,231,.07);color:var(--sand);border-color:rgba(216,191,134,.45)}
+
+/* planner */
+.planner{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:center}
+.pl-card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:26px}
+.pl-card label{display:block;font-weight:600;font-size:14.5px;margin-bottom:8px}
+.pl-row{display:flex;gap:12px;align-items:center}
+.pl-row input[type=range]{flex:1;accent-color:var(--sea)}
+.pl-row output{min-width:96px;text-align:right;font:600 18px 'Sora',sans-serif;color:var(--sea)}
+.boxes{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px;min-height:60px}
+.box{width:86px;height:40px;border-radius:4px;background:repeating-linear-gradient(90deg,var(--tide) 0 5px,#178595 5px 9px);position:relative;overflow:hidden}
+.box i{position:absolute;inset:0 auto 0 0;background:var(--sand);opacity:.9}
+.pl-out{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:18px}
+.pl-out div{background:var(--foam);border-radius:10px;padding:12px}
+.pl-out b{display:block;font:700 22px 'Sora',sans-serif;color:var(--sea)}
+.pl-out span{font-size:12.5px;color:var(--muted)}
+
+/* terms */
+.terms{width:100%;border-collapse:collapse;background:#fff;border:1px solid var(--line);border-radius:14px;overflow:hidden;font-size:15px}
+.terms th,.terms td{padding:15px 18px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+.terms th{width:30%;font:600 15px 'Sora',sans-serif;color:var(--sea);background:#fcfbf8}
+.terms tr:last-child th,.terms tr:last-child td{border-bottom:0}
+.terms small{display:block;color:var(--muted);font-size:13px}
+
+/* steps */
+.steps{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;counter-reset:s}
+.step{counter-increment:s;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:12px;padding:20px}
+.step::before{content:counter(s);display:grid;place-items:center;width:34px;height:34px;border-radius:50%;background:var(--sand);color:#2b1d05;font:700 15px 'Sora',sans-serif;margin-bottom:12px}
+.step h3{font-size:17px;margin-bottom:6px}
+.step p{font-size:14px;color:#a9cad0}
+.docs{display:flex;flex-wrap:wrap;gap:8px;margin-top:24px}
+.docs span{border:1px solid rgba(255,255,255,.2);border-radius:99px;padding:6px 13px;font-size:13.5px;color:#d7e8eb}
+
+/* compliance */
+.comp{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.comp div{background:#fff;border:1px solid var(--line);border-radius:12px;padding:18px}
+.comp .k{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--tide);font-weight:600}
+.comp b{display:block;font:600 16px 'Sora',sans-serif;color:var(--sea);margin:6px 0 4px}
+.comp p{font-size:13.5px;color:#a0781e}
+
+/* rfq */
+.rfq{display:grid;grid-template-columns:.8fr 1.2fr;gap:40px;align-items:start}
+.rfq-side ul{list-style:none;display:grid;gap:14px;margin-top:22px}
+.rfq-side li{display:flex;gap:12px;font-size:15px}
+.rfq-side li b{font:700 16px 'Sora',sans-serif;color:var(--sand);min-width:22px}
+form{background:#fff;border:1px solid var(--line);border-radius:14px;padding:26px}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:14px}
+.f{display:flex;flex-direction:column;gap:6px;min-width:0}
+.f.full{grid-column:1/-1}
+.f label,.f .lbl{font-size:13.5px;font-weight:600}
+input,select,textarea{font:400 15.5px 'Inter',sans-serif;padding:11px 12px;border:1px solid var(--line2);border-radius:8px;width:100%;background:#fff;color:var(--ink)}
+textarea{min-height:80px;resize:vertical}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chips label{display:flex;gap:7px;align-items:center;padding:8px 12px;border:1px solid var(--line2);border-radius:8px;font-size:14px;font-weight:500;cursor:pointer}
+.chips input{width:auto;accent-color:var(--sea)}
+.chips label:has(input:checked){background:var(--sea);color:#fff;border-color:var(--sea)}
+.err{display:none;color:#b0362a;font-size:13px}
+.f.bad .err{display:block}.f.bad input,.f.bad select,.f.bad .chips{border-color:#b0362a}
+.done{display:none;background:var(--deep);color:#fff;border-radius:12px;padding:20px;margin-top:16px}
+.done.show{display:block}
+.done h3{font-size:20px}
+.done p{color:#a9cad0;font-size:14px}
+.done pre{font:500 12.5px/1.6 ui-monospace,Consolas,monospace;background:#03181d;border-left:3px solid var(--sand);padding:14px;margin-top:12px;white-space:pre-wrap;color:#d7e8eb}
+
+footer{background:var(--deep);color:#9fc3ca;font-size:14px;padding:44px 0 26px}
+.fgrid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:28px}
+footer h4{color:#fff;font:600 15px 'Sora',sans-serif;margin-bottom:10px}
+footer ul{list-style:none;display:grid;gap:6px}
+footer a{text-decoration:none}footer a:hover{color:#fff}
+.fbase{border-top:1px solid rgba(255,255,255,.1);margin-top:26px;padding-top:16px;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+.callbar{display:none}
+
+@media (max-width:980px){
+  .hero .wrap,.planner,.rfq{grid-template-columns:1fr}
+  .prod-grid{grid-template-columns:1fr 1fr}
+  .steps{grid-template-columns:1fr 1fr}
+  .comp{grid-template-columns:1fr 1fr}
+}
+@media (max-width:860px){
+  .menu-btn{display:block}
+  nav.main{display:none;position:absolute;top:100%;left:0;right:0;background:#fff;flex-direction:column;padding:8px 12px 16px;border-bottom:1px solid var(--line)}
+  nav.main.open{display:flex}
+  nav.main a{padding:12px}
+  .bar{position:relative}
+  .bar>.btn{display:none}
+}
+@media (max-width:640px){
+  body{padding-bottom:60px}
+  .prod-grid,.steps,.comp,.fgrid{grid-template-columns:1fr}
+  .trust .wrap{grid-template-columns:1fr 1fr}
+  .trust div:nth-child(3){border-left:0;padding-left:0}
+  .row{grid-template-columns:1fr}
+  section.block{padding:58px 0}
+  .hero .wrap{padding-top:46px;padding-bottom:70px}
+  form,.pl-card,.route{padding:20px}
+  .terms th,.terms td{display:block;width:100%}
+  .terms th{border-bottom:0;padding-bottom:2px}
+  .pl-out b{font-size:18px}
+  .callbar{display:grid;grid-template-columns:1fr 1fr;position:fixed;left:0;right:0;bottom:0;z-index:50}
+  .callbar a{padding:16px;text-align:center;font-weight:600;text-decoration:none}
+  .callbar a:first-child{background:#1fa855;color:#fff}
+  .callbar a:last-child{background:var(--sea);color:#fff}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+</style>
+</head>
+<body>
+<div class="concept"><b>Concept design</b> prepared by Deshlan Pillay for Barak International. Not the official website. Products, specifications, terms and contact details are <b>samples</b> to be replaced with yours.</div>
+
+<header><div class="wrap bar">
+  <a class="logo" href="#top" aria-label="Barak International home">
+    <svg viewBox="0 0 40 40" fill="none" aria-hidden="true"><circle cx="20" cy="20" r="19" fill="#0e4a58"/><path d="M17 31l1.4-14h3.2L23 31z" fill="#fff"/><path d="M16.5 17h7l-1-3h-5z" fill="#d4ad6e"/><path d="M18 14l2-3 2 3z" fill="#fff"/><path d="M23 13l9-3M23 15l9 1" stroke="#d4ad6e" stroke-width="1.2" stroke-linecap="round"/><path d="M8 31c3-1.6 5-1.6 8 0s5 1.6 8 0 5-1.6 8 0" stroke="#1c8b9b" stroke-width="1.6" stroke-linecap="round"/></svg>
+    <span><b>BARAK</b><i>International</i></span>
+  </a>
+  <button class="menu-btn" aria-label="Open menu" aria-expanded="false" aria-controls="nav"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+  <nav class="main" id="nav" aria-label="Main">
+    <a href="#products">Products</a>
+    <a href="#planner">Container planner</a>
+    <a href="#terms">Export terms</a>
+    <a href="#process">How it works</a>
+    <a href="#compliance">Compliance</a>
+  </nav>
+  <a class="btn btn-sea" href="#rfq">Request a quote</a>
+</div></header>
+
+<main id="top">
+<div class="hero">
+  <div class="wrap">
+    <div>
+      <p class="eyebrow">South African beverage exporter · Umhlanga, Durban</p>
+      <h1>South African beverages, <span>shipped to your port.</span></h1>
+      <p class="lead">Barak International supplies importers and distributors with South African sparkling and flavoured beverages, in full container loads from the Port of Durban.</p>
+      <div class="cta"><a class="btn btn-sand" href="#rfq">Request a quote</a><a class="btn btn-ghost" href="#products">See the range</a></div>
+    </div>
+    <div class="route" aria-label="Example trade lane">
+      <h2>Already shipping to the United States</h2>
+      <div class="lane">
+        <div class="port"><b>DUR</b><small>Durban, ZA</small></div>
+        <div class="path"><span class="ship" aria-hidden="true">🚢</span></div>
+        <div class="port"><b>NYC</b><small>New York / Newark</small></div>
+      </div>
+      <div class="facts">
+        <div><b>Full containers</b><span>FCL from Durban</span></div>
+        <div><b>FOB or CIF</b><span>quoted to your port (sample)</span></div>
+        <div><b>Sea freight</b><span>with a major carrier</span></div>
+        <div><b>Your market next</b><span>tell us where you import</span></div>
+      </div>
+    </div>
+  </div>
+  <svg class="waves" viewBox="0 0 1440 120" preserveAspectRatio="none" aria-hidden="true"><path d="M0 60c120-30 240-30 360 0s240 30 360 0 240-30 360 0 240 30 360 0v60H0z" fill="#fff"/><path d="M0 85c120-25 240-25 360 0s240 25 360 0 240-25 360 0 240 25 360 0v35H0z" fill="#fff" opacity=".6"/></svg>
+</div>
+<div class="trust"><div class="wrap">
+  <div><b>Based in Umhlanga</b>minutes from the Port of Durban</div>
+  <div><b>Export experience</b>containers shipped to the USA</div>
+  <div><b>One contact</b>from quote to arrival</div>
+  <div><b>Documents handled</b>invoice, packing list, origin, B/L</div>
+</div></div>
+
+<!-- PRODUCTS -->
+<section class="block" id="products"><div class="wrap">
+  <div class="head"><div><p class="eyebrow">The range</p><h2>What we export</h2></div><p class="sub">Tick the products you're interested in and they'll be added to your quote request.</p></div>
+  <div class="prod-grid">
+    <article class="prod"><div class="art" style="background:linear-gradient(180deg,#e6f3f5,#cfe7eb)"><span class="badge">Exported to the USA</span>
+      <svg viewBox="0 0 60 140" aria-hidden="true"><path d="M24 4h12v14c0 4 8 8 8 18v94a6 6 0 0 1-6 6H22a6 6 0 0 1-6-6V36c0-10 8-14 8-18z" fill="#9fd3dc" opacity=".55" stroke="#0e4a58" stroke-width="2"/><rect x="16" y="66" width="28" height="34" fill="#0e4a58"/><circle cx="26" cy="110" r="2" fill="#fff" opacity=".7"/><circle cx="34" cy="120" r="1.5" fill="#fff" opacity=".7"/><rect x="23" y="0" width="14" height="6" rx="1" fill="#d4ad6e"/></svg></div>
+      <div class="bd"><h3>Sparkling water</h3><p>Carbonated water in PET bottles, the line already shipped to buyers in the United States.</p>
+        <table class="spec"><tr><td>Pack</td><td>500 ml × 24 (sample)</td></tr><tr><td>Shelf life</td><td>12 months (sample)</td></tr></table>
+        <div class="add"><label><input type="checkbox" class="pick" value="Sparkling water">Add to quote</label></div></div></article>
+    <article class="prod"><div class="art" style="background:linear-gradient(180deg,#fbeedd,#f3dcc0)"><span class="badge">Sample product</span>
+      <svg viewBox="0 0 60 140" aria-hidden="true"><path d="M24 4h12v14c0 4 8 8 8 18v94a6 6 0 0 1-6 6H22a6 6 0 0 1-6-6V36c0-10 8-14 8-18z" fill="#f3c98b" opacity=".6" stroke="#8a5a17" stroke-width="2"/><rect x="16" y="66" width="28" height="34" fill="#c9832e"/><rect x="23" y="0" width="14" height="6" rx="1" fill="#0e4a58"/></svg></div>
+      <div class="bd"><h3>Flavoured sparkling</h3><p>Lightly flavoured sparkling drinks, for example citrus or berry.</p>
+        <table class="spec"><tr><td>Pack</td><td>330 ml × 24 (sample)</td></tr><tr><td>Shelf life</td><td>12 months (sample)</td></tr></table>
+        <div class="add"><label><input type="checkbox" class="pick" value="Flavoured sparkling">Add to quote</label></div></div></article>
+    <article class="prod"><div class="art" style="background:linear-gradient(180deg,#f3e6df,#e6cbbd)"><span class="badge">Sample product</span>
+      <svg viewBox="0 0 60 140" aria-hidden="true"><rect x="14" y="30" width="32" height="104" rx="6" fill="#b45a3c" stroke="#5f2a18" stroke-width="2"/><rect x="18" y="22" width="24" height="10" rx="3" fill="#5f2a18"/><rect x="14" y="70" width="32" height="26" fill="#f6efe2"/><path d="M22 83c4-6 12-6 16 0" stroke="#5f2a18" stroke-width="2" fill="none"/></svg></div>
+      <div class="bd"><h3>Rooibos iced tea</h3><p>A uniquely South African drink, naturally caffeine-free.</p>
+        <table class="spec"><tr><td>Pack</td><td>330 ml × 24 (sample)</td></tr><tr><td>Shelf life</td><td>9 months (sample)</td></tr></table>
+        <div class="add"><label><input type="checkbox" class="pick" value="Rooibos iced tea">Add to quote</label></div></div></article>
+  </div>
+  <p class="sample">Only the sparkling water line comes from your shipment records. The other two products, all pack sizes and shelf lives are placeholders, to be replaced with your real range and spec sheets.</p>
+</div></section>
+
+<!-- PLANNER -->
+<section class="block foam" id="planner"><div class="wrap planner">
+  <div>
+    <p class="eyebrow">Container planner</p>
+    <h2 style="font-size:clamp(28px,3.6vw,42px);margin:8px 0 12px;color:var(--sea)">How many containers is your order?</h2>
+    <p class="sub">Slide to your order size in cases. The planner uses a typical full load of about 3,960 cases (around 26.5 tonnes) per container, taken from a recent Barak International shipment.</p>
+    <p class="sample">Planning guide only. Cases per container depend on the product and pack size.</p>
+  </div>
+  <div class="pl-card">
+    <label for="cases">Order size</label>
+    <div class="pl-row"><input id="cases" type="range" min="500" max="24000" step="100" value="7900"><output id="casesOut"></output></div>
+    <div class="boxes" id="boxes" aria-hidden="true"></div>
+    <div class="pl-out">
+      <div><b id="cont"></b><span>containers</span></div>
+      <div><b id="fill"></b><span>last container full</span></div>
+      <div><b id="kg"></b><span>gross weight, approx.</span></div>
+    </div>
+    <p style="margin-top:16px"><a class="btn btn-sea" href="#rfq" id="useQty">Use this quantity in my quote</a></p>
+  </div>
+</div></section>
+
+<!-- TERMS -->
+<section class="block white" id="terms"><div class="wrap">
+  <div class="head"><div><p class="eyebrow">Export terms</p><h2>How we trade</h2></div><p class="sub">The answers importers usually need before a first order.</p></div>
+  <table class="terms">
+    <tr><th>Minimum order</th><td>One full container load per order<small>Mixed products within a container on request</small></td></tr>
+    <tr><th>Incoterms</th><td>FOB Durban, CFR or CIF to your port<small>Ex-works collection in KwaZulu-Natal on request</small></td></tr>
+    <tr><th>Port of loading</th><td>Durban, South Africa</td></tr>
+    <tr><th>Lead time</th><td>3 to 4 weeks from confirmed order and deposit<small>Plus sailing time to your port</small></td></tr>
+    <tr><th>Payment</th><td>Deposit on order, balance against copy bill of lading<small>Letter of credit considered for larger orders</small></td></tr>
+    <tr><th>Labelling</th><td>English labels as standard; importer labels and stickering on request</td></tr>
+  </table>
+  <p class="sample">Every term on this table is a sample. Replace with your actual minimums, lead times and payment terms.</p>
+</div></section>
+
+<!-- PROCESS -->
+<section class="block dark" id="process"><div class="wrap">
+  <div class="head"><div><p class="eyebrow">How it works</p><h2>From enquiry to arrival</h2></div><p class="sub">One point of contact for the whole order.</p></div>
+  <div class="steps">
+    <div class="step"><h3>Enquiry &amp; quote</h3><p>Send the products, quantity and your port. You get a price on your chosen Incoterm.</p></div>
+    <div class="step"><h3>Proforma &amp; deposit</h3><p>We confirm the order with a proforma invoice and production slot.</p></div>
+    <div class="step"><h3>Production &amp; packing</h3><p>Stock is produced, packed and palletised for export.</p></div>
+    <div class="step"><h3>Loaded in Durban</h3><p>The container is loaded, sealed and booked on the vessel.</p></div>
+    <div class="step"><h3>Arrival</h3><p>Documents go to you or your customs broker ahead of arrival.</p></div>
+  </div>
+  <div class="docs" aria-label="Export documents supplied">
+    <span>Commercial invoice</span><span>Packing list</span><span>Bill of lading</span><span>Certificate of origin</span><span>Product spec sheets</span><span>Details for US FDA prior notice</span>
+  </div>
+  <p class="sample">Sample process and document list, to be confirmed.</p>
+</div></section>
+
+<!-- COMPLIANCE -->
+<section class="block" id="compliance"><div class="wrap">
+  <div class="head"><div><p class="eyebrow">Compliance</p><h2>Registered and ready to supply</h2></div><p class="sub">The registrations a buyer's procurement team checks before a first order.</p></div>
+  <div class="comp">
+    <div><p class="k">Company</p><b>Barak International</b><p>CIPC registration no. (to be added)</p></div>
+    <div><p class="k">SARS</p><b>Registered exporter</b><p>Customs client number (to be added)</p></div>
+    <div><p class="k">United States</p><b>FDA food facility registration</b><p>Registration of the producing facility (to be confirmed)</p></div>
+    <div><p class="k">Food safety</p><b>Producer certification</b><p>For example HACCP or FSSC 22000 (to be added)</p></div>
+  </div>
+</div></section>
+
+<!-- RFQ -->
+<section class="block white" id="rfq"><div class="wrap rfq">
+  <div class="rfq-side">
+    <p class="eyebrow">Request a quote</p>
+    <h2 style="font-size:clamp(28px,3.6vw,42px);margin:8px 0 12px;color:var(--sea)">Tell us what you need</h2>
+    <p class="sub">Quotes are usually returned within two working days (sample).</p>
+    <ul>
+      <li><b>1</b><span>Products you ticked above are already filled in.</span></li>
+      <li><b>2</b><span>Every request gets a reference number.</span></li>
+      <li><b>3</b><span>It arrives as one complete email, ready to price.</span></li>
+    </ul>
+  </div>
+  <form id="qf" novalidate>
+    <div class="row">
+      <div class="f full"><span class="lbl">Products</span><div class="chips" id="prodChips">
+        <label><input type="checkbox" name="p" value="Sparkling water">Sparkling water</label>
+        <label><input type="checkbox" name="p" value="Flavoured sparkling">Flavoured sparkling</label>
+        <label><input type="checkbox" name="p" value="Rooibos iced tea">Rooibos iced tea</label></div><span class="err">Please choose at least one product.</span></div>
+    </div>
+    <div class="row">
+      <div class="f"><label for="qty">Quantity</label><input id="qty" name="qty" placeholder="e.g. 2 containers or 7,900 cases" required><span class="err">How much do you need?</span></div>
+      <div class="f"><label for="inco">Incoterm</label><select id="inco" name="inco"><option>FOB Durban</option><option>CFR to my port</option><option>CIF to my port</option><option>Not sure</option></select></div>
+    </div>
+    <div class="row">
+      <div class="f"><label for="port">Destination port</label><input id="port" name="port" placeholder="e.g. New York / Newark" required><span class="err">Where should it ship to?</span></div>
+      <div class="f"><label for="date">Target arrival</label><input id="date" name="date" type="month"></div>
+    </div>
+    <div class="row">
+      <div class="f"><label for="co">Company</label><input id="co" name="co" autocomplete="organization" required><span class="err">Please add your company.</span></div>
+      <div class="f"><label for="country">Country</label><input id="country" name="country" autocomplete="country-name"></div>
+    </div>
+    <div class="row">
+      <div class="f"><label for="nm">Your name</label><input id="nm" name="nm" autocomplete="name" required><span class="err">Please add your name.</span></div>
+      <div class="f"><label for="em">Email</label><input id="em" name="em" type="email" autocomplete="email" required><span class="err">Please add a valid email.</span></div>
+    </div>
+    <div class="row"><div class="f full"><label for="notes">Anything else?</label><textarea id="notes" name="notes" placeholder="Labelling, mixed loads, certifications you need..."></textarea></div></div>
+    <button class="btn btn-sea" type="submit" style="width:100%">Send quote request</button>
+    <div class="done" id="done" role="status" aria-live="polite"><h3>Request <span id="ref"></span> ready</h3><p>Demo only: nothing was sent. On the live site, this goes to your @barakintnl.com inbox.</p><pre id="preview"></pre></div>
+  </form>
+</div></section>
+</main>
+
+<footer><div class="wrap">
+  <div class="fgrid">
+    <div><p style="font:700 17px 'Sora',sans-serif;letter-spacing:.14em;color:#fff">BARAK <span style="font-weight:500;letter-spacing:.2em;font-size:12px;color:var(--sand)">INTERNATIONAL</span></p><p style="margin-top:8px">South African beverages for importers and distributors, shipped from the Port of Durban.</p></div>
+    <div><h4>Explore</h4><ul><li><a href="#products">Products</a></li><li><a href="#terms">Export terms</a></li><li><a href="#compliance">Compliance</a></li><li><a href="#rfq">Request a quote</a></li></ul></div>
+    <div><h4>Contact</h4><ul><li>Umhlanga, Durban, KwaZulu-Natal</li><li><a href="#rfq">sales@barakintnl.com <span style="color:var(--sand)">(sample)</span></a></li><li>WhatsApp: +27 XX XXX XXXX <span style="color:var(--sand)">(sample)</span></li></ul></div>
+  </div>
+  <div class="fbase"><span>© <span id="yr"></span> Barak International</span><span>Concept by Deshlan Pillay</span></div>
+</div></footer>
+<div class="callbar"><a href="#rfq">WhatsApp (sample)</a><a href="#rfq">Request a quote</a></div>
+
+<script>
+document.getElementById('yr').textContent = new Date().getFullYear();
+const $ = id => document.getElementById(id);
+const menuBtn = document.querySelector('.menu-btn'), nav = $('nav');
+menuBtn.addEventListener('click', () => { const o = nav.classList.toggle('open'); menuBtn.setAttribute('aria-expanded', o); });
+nav.addEventListener('click', e => { if (e.target.tagName === 'A') { nav.classList.remove('open'); menuBtn.setAttribute('aria-expanded', 'false'); } });
+
+/* product picks sync with the quote form */
+const formChips = [...document.querySelectorAll('#prodChips input')];
+document.querySelectorAll('.pick').forEach(p => p.addEventListener('change', () => {
+  formChips.find(c => c.value === p.value).checked = p.checked;
+}));
+formChips.forEach(c => c.addEventListener('change', () => {
+  const p = [...document.querySelectorAll('.pick')].find(x => x.value === c.value); if (p) p.checked = c.checked;
+}));
+
+/* container planner: ~3,960 cases and ~26,500 kg per full load (from a recent shipment) */
+const PER = 3960, KG = 26500 / 3960;
+const fmt = n => n.toLocaleString('en-ZA').replace(/ /g, ' ');
+function plan() {
+  const cases = +$('cases').value;
+  const full = Math.floor(cases / PER), rem = cases % PER, n = full + (rem ? 1 : 0);
+  $('casesOut').textContent = fmt(cases) + ' cases';
+  $('cont').textContent = n;
+  $('fill').textContent = rem ? Math.round(rem / PER * 100) + '%' : '100%';
+  $('kg').textContent = fmt(Math.round(cases * KG / 100) * 100) + ' kg';
+  $('boxes').innerHTML = Array.from({ length: n }, (_, i) => {
+    const pct = (i < full) ? 100 : Math.round(rem / PER * 100);
+    return `<div class="box" title="Container ${i + 1}: ${pct}% full"><i style="width:${100 - pct}%;left:auto;right:0;background:#e7eef0;opacity:1"></i></div>`;
+  }).join('');
+}
+$('cases').addEventListener('input', plan); plan();
+$('useQty').addEventListener('click', () => { const c = +$('cases').value; const n = Math.ceil(c / PER); $('qty').value = `${fmt(c)} cases (about ${n} container${n > 1 ? 's' : ''})`; });
+
+/* quote form: validate, then preview the email (never sends) */
+$('qf').addEventListener('submit', e => {
+  e.preventDefault();
+  let first = null;
+  document.querySelectorAll('#qf .f.bad').forEach(f => f.classList.remove('bad'));
+  const picked = formChips.filter(c => c.checked).map(c => c.value);
+  if (!picked.length) { $('prodChips').closest('.f').classList.add('bad'); first = formChips[0]; }
+  document.querySelectorAll('#qf [required]').forEach(i => {
+    const v = i.value.trim(), bad = !v || (i.type === 'email' && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v));
+    if (bad) { i.closest('.f').classList.add('bad'); first = first || i; }
+  });
+  if (first) { $('done').classList.remove('show'); first.focus(); return; }
+  const d = Object.fromEntries(new FormData($('qf')));
+  const t = new Date(), p = x => String(x).padStart(2, '0');
+  const ref = `BI-${String(t.getFullYear()).slice(2)}${p(t.getMonth() + 1)}${p(t.getDate())}-${Math.floor(1000 + Math.random() * 9000)}`;
+  $('ref').textContent = ref;
+  $('preview').textContent = [
+    `To: sales@barakintnl.com`, `Subject: Quote ${ref}: ${d.co}, ${picked.join(' + ')} to ${d.port}`, '',
+    `Products:     ${picked.join(', ')}`, `Quantity:     ${d.qty}`, `Incoterm:     ${d.inco}`, `Destination:  ${d.port}`,
+    `Arrival:      ${d.date || '(not given)'}`, '', `Company:      ${d.co}${d.country ? ', ' + d.country : ''}`, `Contact:      ${d.nm}`, `Email:        ${d.em}`,
+    ...(d.notes ? ['', `Notes:        ${d.notes}`] : []),
+  ].join('\n');
+  $('done').classList.add('show');
+  $('done').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+});
+</script>
+</body>
+</html>
